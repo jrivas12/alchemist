@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void sortNums(int * a, int cnt);
+
+int main()
+{
+    int tmp;
+    FILE *fptr = ("test.txt", "w", &tmp);
+    FILE *fp2;
+    //= ("test.bin", "w");
+    
+    int a[10];
+    int cnt=0,i;
+    
+    if (fptr==NULL){
+        printf("File inaccessible");
+        return 1;
+    }
+    while(fscanf(fptr, "%d", &tmp)!=EOF){
+        printf("%d", tmp);
+        a[cnt++]=tmp;
+    }
+    fclose(fptr);
+    
+   // sortNums(int a, cnt);
+    
+    fp2=fopen("sorted.txt", "w");
+    if(fp2==NULL){
+        printf("cannot open file for writing!");
+    } 
+    for(i=0; i<cnt; i++){
+        fprintf(fp2, "%d", a[i]);
+    }
+    fclose(fp2);
+
+    return 0;
+}
+void sortNums(int *a, int cnt)
+{
+    int i, j, tmp;
+    for(i=1; i<cnt; i++){
+        tmp=a[i];
+        j=i-1;
+        while(tmp<a[j]&&j>=0){
+            a[j+1]=a[j];
+            j=j-1;
+        }
+        a[j+1]=tmp;
+    }
+        
+}

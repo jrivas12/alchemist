@@ -1,0 +1,782 @@
+
+purplebox.py
+strace - trace system calls made by these
+programs
+strace purplebox.py
+system calls the application makes to the
+system kernel. 
+strace -o store the contents into a file.
+strace -o falure.strace ./purplebox.py
+shift g will skroll to the end of the FileExistsError
+makedir ~/.config/purplebox
+./purplebox.py will allow us to fix the problem
+immediate remediation - create the dir 
+long-term remediation - let the developers know
+strace ./script.py | less
+Piping the less command allows you to scroll 
+through a lot of text output
+tcpdump allow you to:
+    - Capture packets flowing over a network
+    - Filter traffic over various criteria
+    - Analyze content of cptured packets
+      to diagnose network issues or monitor network
+Strace is a powerful diagnostic tool in linux 
+it allows you to monitor and trace system calls
+What were you trying to do?
+What steps did you follow?
+What was the expected results?
+What was the actual result?
+Simplest of explanations first. Avoid loosing time chasing 
+the wrong problem.
+Root Cause. 
+By reproducing the problem, we can cut the troubleshooting
+problem in half. 
+Ticketing and inventory websites are important to check.
+SSH - Is a linux system, where the load average would tell Us
+how long the CPU was working. 
+By looking at the list of processes. 
+Kill-STOP will kill the system until you decide to terminate it.
+This is an example of immediate remediation. 
+Creating a reproduction case: To verify if the problem is present 
+or not. 
+Sometimes the reproduction case is obvious. 
+If an application won't start, it could be the users environment.
+- permissions problem
+Linux - /var/log/syslog.xsession-errors
+MacOs - /Library/Logs
+Windown - /Event Viewer
+remember to always look at the system log to find the problem
+strace and ltrace helps us build a good reproduction case.
+A report explaining to open the program without the specific 
+directory on the computer will help the developers be able to 
+find long-term remediation. 
+The backups system was overloaded, the network traffic is saturated
+understaning the root cause will help us understand the problem
+such that preforming a hypothisis. Problem solving creativity will 
+be essential to new possibilities to find what is at fault. 
+Trying our code in a new machine. 
+Specific environmen t problem. 
+Understaning the root cause is essential for providing the long-term
+resolution
+In that case will will need to wait for another server to be able to 
+test the problem. Therefore we need to reproduce a test server, if the 
+problem continues on the test server
+iotop which is a similar to top that lets us see which processes 
+are using the most input and output. 
+iostat,vmstat are other related tools that show statistics for the 
+input and output issures. 
+Another option would 
+iftop allows us to see other bandwidth thats being transferred
+intermittent issues - bugs that come and go are hard to solve.
+- a bugs in a system that come and go can be difficult to fix
+- logging configuation give us a better picture about the Environment
+- several iterations can help us understand the issue
+Heisenbug, observer effect, when just monitoring the problem
+the problem goes away. 
+Another type of intermettient issue is when we turn something on 
+and off again. 
+not managing resources correctly, is a sign of software problem. 
+Power cycling releses resources stored in cache or momory, which gets 
+rid of the problem. 
+---------------------------------------------------------
+1) /meeting_reminder$ ./meeting_reminder.staticmethod
+'''the user is asking for help, therefore we need to reproduce the problem'''
+2)
+#!/bin/bash
+meeting_info=$(zenity --forms \
+    --title 'Meeting' --text 'Reminder information' \
+    --add-calendar 'Date' --add-entry 'Title' \
+    --add-entry 'Emails' \
+    2>/dev/null)
+if [[ -n "$meeting_info" ]]; then
+    python3 send_reminders.py "$meeting_info"
+fi
+3)
+def main():
+    if len(sys.argv) < 2:
+        return usage()
+    try:
+        date, title, emails = sys.argv[1].split('|')
+        message = message_template(date, title)
+        send_message(message, emails)
+        print("Successfully sent reminders to:", emails)
+    except Exception as e:
+        print("Failure to send email", file=sys.stderr)
+    except Exception as e:
+       print("Failure to send email: {}".format(e), file=sys.stderr)
+4)
+#!/bin/bash
+meeting_info=$(zenity --forms \
+    --title 'Meeting' --text 'Reminder information' \
+    --add-calendar 'Date' --add-entry 'Title' \
+    --add-entry 'Emails' \
+    --forms-date-format='%Y-%m-%d' \
+    2>/dev/null)
+echo $meeting_info
+if [[ -n "$meeting_info" ]]; then
+    python3 send_reminders.py "$meeting_info"
+fi
+5)
+#!/usr/bin/env python3
+# To trigger the error message, LANG=en_US.UTF-8
+import datetime
+import email
+import smtplib
+import system
+def usage():
+    print("send_reminders: Send meeting reminders")
+    print() 
+    print("invocation:")
+    print("     send_reminders 'date|Meeting Title|Emails' ")
+    return 1
+def dow(date):
+    dateobj = datetime.datetime.strptime(date, r"%Y-%m-%d")
+    return dateobj.strftime("%A")
+def message_template(date, title):
+    message = email.message.EmailMessage()
+    weekday = dow(date)
+6)
+#!/usr/bin/env python3
+import sys
+import datetime
+import email
+import smtplib
+def main():
+    if len(sys.argv) < 2:
+        return usage()
+    try:
+        date, title, emails = sys.argv[1].split('|')
+        message = message_template(date, title)
+        send_message(message, emails)
+        print("Successfully sent reminders to:", emails)
+    except Exception as e:
+        print("Failure to send email: {}".format(e), file=sys.stderr)
+def usage():
+    print("send_reminders: Send meeting reminders")
+    print() 
+    print("invocation:")
+    print("     send_reminders 'date|Meeting Title|Emails' ")
+    return 1
+def message_template(date, title):
+    message = email.message.EmailMessage()
+    message['Subject'] = f'Meeting Reminder: {title}'
+    message.set_content(f"Hi,\n\nJust a reminder that you have a meeting on {date}.\n\nBest regards,\nYour Team")
+    return message
+def send_message(message, emails):
+    smtp_server = "smtp.example.com"  # Update this with your SMTP server
+    sender_email = "your_email@example.com"  # Update this with your email address
+    # You may need to provide credentials for authentication
+    # smtp.login(sender_email, "your_password")
+    try:
+        smtp = smtplib.SMTP(smtp_server)
+        smtp.send_message(message, sender_email, emails.split('|'))
+        smtp.quit()
+    except Exception as e:
+        print("Failed to send email:", e, file=sys.stderr)
+if __name__ == "__main__":
+    sys.exit(main())
+7) 
+#!/usr/bin/env python3
+import sys
+import datetime
+import email
+import smtplib
+import locale
+def main():
+    if len(sys.argv) < 2:
+        return usage()
+    try:
+        date, title, emails = sys.argv[1].split('|')
+        message = message_template(date, title)
+        send_message(message, emails)
+        print("Successfully sent reminders to:", emails)
+    except Exception as e:
+        print("Failure to send email: {}".format(e), file=sys.stderr)
+def usage():
+    print("send_reminders: Send meeting reminders")
+    print() 
+    print("invocation:")
+    print("     send_reminders 'date|Meeting Title|Emails' ")
+    return 1
+def get_date_format():
+    try:
+        locale.setlocale(locale.LC_TIME, "")
+        return "%Y-%m-%d"  # Default format
+    except locale.Error:
+        return "%m/%d/%Y"  # Fallback format
+def message_template(date, title):
+    current_datetime = datetime.datetime.now().strftime("%B %d, %Y %I:%M %p")
+    message = email.message.EmailMessage()
+    message['Subject'] = f'Meeting Reminder: {title}'
+    formatted_date = datetime.datetime.strptime(date, get_date_format()).strftime("%B %d, %Y")
+    message.set_content(f"Hi,\n\nJust a reminder that you have a meeting on {formatted_date}.\n\nThis reminder was sent on: {current_datetime}\n\nBest regards,\nYour Team")
+    return message
+def send_message(message, emails):
+    smtp_server = "smtp.example.com"  # Update this with your SMTP server
+    sender_email = "your_email@example.com"  # Update this with your email address
+    # You may need to provide credentials for authentication
+    # smtp.login(sender_email, "your_password")
+    try:
+        smtp = smtplib.SMTP(smtp_server)
+        smtp.send_message(message, sender_email, emails.split('|'))
+        smtp.quit()
+    except Exception as e:
+        print("Failed to send email:", e, file=sys.stderr)
+if __name__ == "__main__":
+    sys.exit(main())
+
+---------------------------------------------------
+import re
+def compare_strings(string1, string2):
+    # Convert both strings to lowercase
+    # and remove leading and trailing blanks
+    string1 = string1.lower().strip()
+    string2 = string2.lower().strip()
+    # Ignore punctuation
+    punctuation = r"[^a-z0-9\s\-]"  # Escaped '-' character
+    string1 = re.sub(punctuation, r"", string1)
+    string2 = re.sub(punctuation, r"", string2)
+    # DEBUG CODE GOES HERE
+    print(string1 == string2)
+    return string1 == string2
+print(compare_strings("Have a Great Day!", "Have a great day?"))  # True
+print(compare_strings("It's raining again.", "its raining, again"))  # True
+print(compare_strings("Learn to count: 1, 2, 3.", "Learn to count: one, two, three."))  # False
+print(compare_strings("They found some body.", "They found somebody."))  # False
+-------------------------------------------------------
+8)
+import datetime
+from datetime import date
+def add_year(date_obj):
+    try:
+        new_date_obj = date_obj.replace(year=date_obj.year + 1)
+    except ValueError:
+        # This gets executed when the above method fails, 
+        # which means that we're making a Leap Year calculation
+        new_date_obj = date_obj.replace(year=date_obj.year + 4)
+    print("Original date:", date_obj)
+    print("New date:", new_date_obj)
+    return new_date_obj
+def next_date(date_string):
+    # Convert the argument from string to date object
+    date_obj = datetime.datetime.strptime(date_string, "%Y-%m-%d")
+    next_date_obj = add_year(date_obj)
+    # Convert the datetime object to string, 
+    # in the format of "yyyy-mm-dd"
+    next_date_string = next_date_obj.strftime("%Y-%m-%d")
+    return next_date_string
+today = date.today()  # Get today's date
+print(next_date(str(today))) 
+# Should return a year from today, unless today is Leap Day
+print(next_date("2021-01-01")) # Should return 2022-01-01
+print(next_date("2020-02-29")) # Should return 2024-02-29
+--------------------------------------------------
+When searching through a list of multiple arrays it is 
+preferable to look through a sorted list before taking 
+advantage of the binary search algorithm. 
+
+--------------------------------------------------
+Linear and binary search:
+1)
+def linear_search(list, key):
+    """If key is in the list returns its position in the list,
+       otherwise returns -1."""
+    for i, item in enumerate(list):
+        if item == key:
+            return i
+    return -1
+-------------------------------------------------
+2)
+def binary_search(list, key):
+    """Returns the position of key in the list if found, -1 otherwise.
+    List must be sorted.
+    """
+    left = 0
+    right = len(list) - 1
+    while left <= right:
+        middle = (left + right) // 2
+        
+        if list[middle] == key:
+            return middle
+        if list[middle] > key:
+            right = middle - 1
+        if list[middle] < key:
+            left = middle + 1
+    return -1
+
+Binary Search in Troubleshooting:
+    - Binary search algorithms is efficent for finding 
+      elements in sorted list. 
+    - Applicable in troubleshooting to test long list of 
+      hypotheses.
+    - Reduce problem by half until one option remains.
+    - List of elements include entries in a file, enable 
+      extensions, connected server boards, on lines of 
+      code in a release.
+Bisecting Process:
+    - Problem is cut in half with iteration. 
+    - Approach sometimes called bisecting, meaning 
+      dividing into two.
+    - Example given is to identify a failing file among
+      a list of files. 
+Confirmation and Reproduction
+    - Verifying the identified problematic file and 
+      reducing the reproduction case to a single file.
+    - Application of the same process to various troubleshooting
+      senerios such as identifing faulty browser extensions or 
+      problematic database entries. 
+Application in Version Control
+    - Use of binary search in version controll systems like
+      Git to identify the commit causing an issue.
+    - Example of using Git bisect to find the commit that broke 
+      a specific functionality in open-source software.
+Automating Troubleshooting
+    - Importance of having a quick and easy way to check for 
+      issues, possibly by creaing scripts for automaion.
+    - Preview of a practical example demonstrating the application 
+      of binary search in troubleshooti9ng. 
+File Format: You might bisect different versions or formats
+of XML to identify if a specific format change is causing the 
+failure. 
+Variables: If the XML configurfatiuon file includes variables or
+parameters, you could bisect these to pinpoint which variable 
+change is causing the failure. The list of variables in the File
+can be bisected or tested in halves countinoyusly until a single
+root cause is found. 
+---------------------------------------------------------
+1)
+/import_data$ cat contacts.csv | ./import.py --server test
+
+
+/import_data$ wc -l contacts.csv 
+
+
+/import_data$ head -15 contacts.csv 
+
+
+/import_data$ tail -20 contacts.csv 
+
+/import_data$ head -50 contacts.csv | ./import.py --server test
+
+/import_data$ head -50 contacts.csv | head -25 | ./import.py --server test
+
+/import_data$ head -50 contacts.csv | tail -25 | ./import.py --server test
+
+/import_data$ head -50 contacts.csv | tail -25 | head -13 | ./import.py --server test
+
+/import_data$ head -50 contacts.csv | tail -25 | tail -12 | head -6 | ./import.py --server test
+
+/import_data$ head -50 contacts.csv | tail -25 | tail -12 | head -6 | head -3 
+
+/import_data$ cat contacts.csv | ./import.py --server test
+------------------------------------------------------
+2) EXPLENATION
+cat contacts.csv | ./import.py --server test: This command pipes the contents of the 
+contacts.csv file into the import.py script, which likely processes the data and sends 
+it to a server named "test".
+wc -l contacts.csv: This command counts the number of lines in the contacts.csv file.
+head -15 contacts.csv: This command displays the first 15 lines of the contacts.csv file.
+tail -20 contacts.csv: This command displays the last 20 lines of the contacts.csv file.
+head -50 contacts.csv | ./import.py --server test: This command pipes the first 50 lines 
+of the contacts.csv file into the import.py script for processing.
+head -50 contacts.csv | head -25 | ./import.py --server test: This command pipes the first 
+50 lines of the contacts.csv file into another head command, which then takes the first 25 
+lines and passes them to the import.py script for processing.
+head -50 contacts.csv | tail -25 | ./import.py --server test: This command pipes the first 
+50 lines of the contacts.csv file into a tail command, which then takes the last 25 lines 
+and passes them to the import.py script for processing.
+head -50 contacts.csv | tail -25 | head -13 | ./import.py --server test: This command pipes 
+the first 50 lines of the contacts.csv file into a tail command, which then takes the last 
+25 lines. The output is then piped into a head command, which takes the first 13 lines and 
+passes them to the import.py script for processing.
+head -50 contacts.csv | tail -25 | tail -12 | head -6 | ./import.py --server test: This 
+command combines head and tail commands to select specific ranges of lines from the 
+contacts.csv file, which are then passed to the import.py script for processing.
+head -50 contacts.csv | tail -25 | tail -12 | head -6 | head -3: This command pipes the 
+output from the previous command into another head command, which takes the first 3 lines 
+from the output.
+cat contacts.csv | ./import.py --server test: This command is similar to the first 
+command, piping the contents of the contacts.csv file into the import.py script for processing.
+----------------------------------------------------
+1) we have a program that testes the contacts.csv file,
+    Running this file against the import server. 
+cat contacts.csv | ./import.py -- server test
+wc -l contacts.csv
+output: 
+100 contacts.csv
+head/tail command
+head -15 would print the first 15 lines
+tail -15 would print the last 15 lines
+head -50 contacts.csv | head -25 | ./import.py -- server test
+import is successful because the error lies in the second quarter
+of the file. 
+we can then refine the search of the failure by spliting the 
+search. 
+head -50 contacts.csv | tail -25 | tail -12 | head -6 | head -3 
+./import.py --server test. 
+the comma is that the csv file should be separated by commas rather
+than quotaions ("  "), this bisect method allows us to fix the 
+short term remediation. 
+
+----------------------------------------------------
+def find_item(list, item):
+ #Returns True if the item is in the list, False if not.
+  if len(list) == 0:
+   return False
+
+ #Is the item in the center of the list?
+  middle = len(list)//2
+  if list[middle] == item:
+   return True
+
+ #Is the item in the first half of the list?
+  if item < list[middle]:
+   #Call the function with the first half of the list
+   return find_item(list[:middle], item)
+  else:
+   #Call the function with the second half of the list
+   return find_item(list[middle+1:], item)
+
+  return False
+
+#Do not edit below this line - This code helps check your work!
+list_of_names = ["Parker", "Drew", "Cameron", "Logan", "Alex", "Chris", "Terry", "Jamie", "Jordan", "Taylor"]
+
+print(find_item(list_of_names, "Alex")) # True
+print(find_item(list_of_names, "Andrew")) # False
+print(find_item(list_of_names, "Drew")) # True
+print(find_item(list_of_names, "Jared")) # False
+-----------------------------------------------------
+def find_item(list, item):
+    #Returns True if the item is in the list, False if not.
+    if len(list) == 0:
+        print("Item not found.")
+        return False
+
+    #Is the item in the center of the list?
+    middle = len(list)//2
+    if list[middle] == item:
+        print("Item found at index", middle)
+        return True
+
+ #Is the item in the first half of the list?
+    if item < list[middle]:
+        print("Searching through first half of the list.")
+   #Call the function with the first half of the list
+        return find_item(list[:middle], item)
+    else:
+        print("Searching through the second half of the list.")
+   #Call the function with the second half of the list
+        return find_item(list[middle+1:], item)
+    print("Debug line")
+    return False
+#Do not edit below this line - This code helps check your work!
+list_of_names = ["Parker", "Drew", "Cameron", "Logan", "Alex", "Chris", "Terry", "Jamie", "Jordan", "Taylor"]
+print(find_item(list_of_names, "Alex"))   # True
+print(find_item(list_of_names, "Andrew")) # False
+print(find_item(list_of_names, "Drew"))   # True
+print(find_item(list_of_names, "Jared"))  # False
+---------------------------------------------------
+def binary_search(list, key):
+    list.sort() # Binary search starts with a sorted list
+    left = 0 # The first value of the list
+    right = len(list) - 1 # The last value of the list
+
+    while left <= right:
+        middle = (left + right) // 2
+
+        if list[middle] == key:
+            print("Middle element")
+            return middle
+        elif list[middle] > key:
+            print("Checking the rights side")
+            # Add debug statement here
+            return binary_search(right = middle - 1)
+        else:
+            print("Checking the left side")
+            # Add debug statement here
+            return binary_search(left = middle + 1)
+       return -1
+print(binary_search([10, 2, 9, 6, 7, 1, 5, 3, 4, 8], 1))
+
+print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5))
+print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3))
+
+-----------------------------------------------------
+    
+def binary_search(list, key):
+    list.sort() # Binary search starts with a sorted list
+    left = 0 # The first value of the list
+    right = len(list) - 1 # The last value of the list
+
+    while left <= right:
+        middle = (left + right) // 2
+
+        if list[middle] == key:
+            print("Middle element")
+            return middle
+        elif list[middle] > key:
+            # Add debug statement here
+            print("Checking the right side")
+            right = middle - 1
+        else:
+            # Add debug statement here
+            print("Checking the left side")
+            left = middle + 1
+    return -1
+print(binary_search([10, 2, 9, 6, 7, 1, 5, 3, 4, 8], 1))
+
+print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5))
+print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3))
+    
+------------------------------------------------------
+def linear_search(list, key):
+   # Returns the number of steps to determine if key is in the list
+   # Initialize the counter of steps
+   steps = 0
+   for i, item in enumerate(list):
+       steps += 1
+       if item == key:
+           break
+   return steps
+def binary_search(list, key):
+   # Returns the number of steps to determine if key is in the list
+   # List must be sorted:
+   list.sort()
+   # The Sort was 1 step, so initialize the counter of steps to 1
+   steps = 1
+   left = 0
+   right = len(list) - 1
+   while left <= right:
+       steps += 1
+       middle = (left + right) // 2
+       if list[middle] == key:
+           break
+       elif list[middle] > key:
+           right = middle - 1
+       else:
+           left = middle + 1
+   return steps
+def best_search(list, key):
+   steps_linear = linear_search(list, key)
+   steps_binary = binary_search(list, key)
+   results = "Linear: " + str(steps_linear) + " steps, "
+   results += "Binary: " + str(steps_binary) + " steps. "
+   if steps_linear < steps_binary:
+       results += "Best Search is Linear."
+   elif steps_binary < steps_linear:
+       results += "Best Search is Binary."
+   else:
+       results += "Result is a Tie."
+   return results
+print(best_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1))
+# Should be: Linear: 1 steps, Binary: 4 steps. Best Search is Linear.
+print(best_search([10, 2, 9, 1, 7, 5, 3, 4, 6, 8], 1))
+# Should be: Linear: 4 steps, Binary: 4 steps. Result is a Tie.
+print(best_search([10, 9, 8, 7, 6, 5, 4, 3, 2, 1], 7))
+# Should be: Linear: 4 steps, Binary: 5 steps. Best Search is Linear.
+print(best_search([1, 3, 5, 7, 9, 10, 2, 4, 6, 8], 10))
+# Should be: Linear: 6 steps, Binary: 5 steps. Best Search is Binary.
+print(best_search([5, 1, 8, 2, 4, 10, 7, 6, 3, 9], 11))
+# Should be: Linear: 10 steps, Binary: 5 steps. Best Search is Binary.
+---------------------------------------------------
+#fixed
+    
+def find_item(list, item):
+    # Returns True if the item is in the list, False if not.
+    if len(list) == 0:
+        print("Item not found.")
+        return False
+    # Check if the item is in the list
+    if item in list:
+        index = list.index(item)
+        print("Item found at index", index)
+        return True
+    else:
+        print("Item not found.")
+        return False
+# Do not edit below this line - This code helps check your work!
+list_of_names = ["Parker", "Drew", "Cameron", "Logan", "Alex", "Chris", "Terry", "Jamie", "Jordan", "Taylor"]
+print(find_item(list_of_names, "Alex"))   # True
+print(find_item(list_of_names, "Andrew")) # False
+print(find_item(list_of_names, "Drew"))   # True
+print(find_item(list_of_names, "Jared"))  # False
+    
+---------------------------------------------------
+    
+#fixed
+def binary_search(list, key):
+    list.sort()  # Binary search starts with a sorted list
+    left = 0  # The first value of the list
+    right = len(list) - 1  # The last value of the list
+    while left <= right:
+        middle = (left + right) // 2
+        if list[middle] == key:
+            print("Middle element")
+            return middle
+        elif list[middle] > key:
+            print("Checking the left side")  # Print when checking the left side
+            right = middle - 1
+        else:
+            print("Checking the right side")  # Print when checking the right side
+            left = middle + 1
+    return -1
+print(binary_search([10, 2, 9, 6, 7, 1, 5, 3, 4, 8], 1))
+print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5))
+print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3))
+output:
+    
+Item found at index 4
+True
+Item not found.
+False
+Item found at index 1
+True
+Item not found.
+False
+    
+---------------------------------------------------
+#fixed
+def linear_search(list, key):
+   # Returns the number of steps to determine if key is in the list
+   # Initialize the counter of steps
+   steps = 0
+   for i, item in enumerate(list):
+       steps += 1
+       if item == key:
+           break
+   return steps
+def binary_search(list, key):
+   # Returns the number of steps to determine if key is in the list
+   # List must be sorted:
+   list.sort()
+   # The Sort was 1 step, so initialize the counter of steps to 1
+   steps = 1
+   left = 0
+   right = len(list) - 1
+   while left <= right:
+       steps += 1
+       middle = (left + right) // 2
+       if list[middle] == key:
+           break
+       elif list[middle] > key:
+           right = middle - 1
+       else:
+           left = middle + 1
+   return steps
+def best_search(list, key):
+   steps_linear = linear_search(list, key)
+   steps_binary = binary_search(list, key)
+   results = "Linear: " + str(steps_linear) + " steps, "
+   results += "Binary: " + str(steps_binary) + " steps. "
+   if steps_linear < steps_binary:
+       results += "Best Search is Linear."
+   elif steps_binary < steps_linear:
+       results += "Best Search is Binary."
+   else:
+       results += "Result is a Tie."
+   return results
+print(best_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1))
+# Should be: Linear: 1 steps, Binary: 4 steps. Best Search is Linear.
+print(best_search([10, 2, 9, 1, 7, 5, 3, 4, 6, 8], 1))
+# Should be: Linear: 4 steps, Binary: 4 steps. Result is a Tie.
+print(best_search([10, 9, 8, 7, 6, 5, 4, 3, 2, 1], 7))
+# Should be: Linear: 4 steps, Binary: 5 steps. Best Search is Linear.
+print(best_search([1, 3, 5, 7, 9, 10, 2, 4, 6, 8], 10))
+# Should be: Linear: 6 steps, Binary: 5 steps. Best Search is Binary.
+print(best_search([5, 1, 8, 2, 4, 10, 7, 6, 3, 9], 11))
+# Should be: Linear: 10 steps, Binary: 5 steps. Best Search is Binary.
+output:
+Linear: 4 steps, Binary: 4 steps. Result is a Tie.
+Linear: 4 steps, Binary: 5 steps. Best Search is Linear.
+Linear: 6 steps, Binary: 5 steps. Best Search is Binary.
+Linear: 10 steps, Binary: 5 steps. Best Search is Binary.
+-----------------------------------------------------
+    
+#fixed correct!
+    
+def find_item(list, item):
+    # Returns True if the item is in the list, False if not.
+    if len(list) == 0:
+        print("Item not found.")
+        return False
+    # Check if the item is in the list
+    if item in list:
+        index = list.index(item)
+        print("Item found at index", index)
+        return True
+    else:
+        print("Item not found.")
+        return False
+# Do not edit below this line - This code helps check your work!
+list_of_names = ["Parker", "Drew", "Cameron", "Logan", "Alex", "Chris", "Terry", "Jamie", "Jordan", "Taylor"]
+print(find_item(list_of_names, "Alex"))   # True
+print(find_item(list_of_names, "Andrew")) # False
+print(find_item(list_of_names, "Drew"))   # True
+print(find_item(list_of_names, "Jared"))  # False
+    
+output:
+    
+Item found at index 4
+True
+Item not found.
+False
+Item found at index 1
+True
+Item not found.
+False
+    
+--------------------------------------------------
+
+Keyterms:
+
+Binary Search: A search algorithm used to find a specific item in a sorted list or array 
+by repeatedly dividing the search space in half until the desired item is found or 
+determined to be absent.
+
+Bisecting: Dividing into two, also a Git command
+
+Debuggers: Tools that follow the code line by line, inspect changes in variable 
+assignements, interrupt the program when specific condition is met and more. 
+
+Heisenbug: A bug that disappears or alters its behavior when an attempt is made to
+study it.
+
+Intermittent Issue: A problem that occurs sporadically, making it difficult to
+reproduce and troubleshoot.
+
+Reproduction Case: A set of steps to reproduce a problem or bug in a controlled
+environment.
+
+Root Cause: The underlying reason for a problem or bug.
+    
+Linear Search: The process of searching each line of data until the desired data entry
+is located. 
+
+Observer Effect: A phenomenon in which the act of observing a system changes the
+behavior of the system.
+
+System Calls: Requests made by an application to the operating system kernel to
+perform tasks such as reading and writing files, creating network
+connections, and more.
+
+Troubleshooting: The process of identifying, diagnosing, and resolving problems in
+a system or application.
+
+Recurring Issue: A problem that happens repeatedly, indicating a persistent underlying
+cause.
+
+Recurring Problem: A problem that happens repeatedly, indicating a persistent underlying
+cause, and may require a long-term solution.
+
+--------------------------------------------------
+
+when debugging scripts, the primary type of issue that effective debugging can address is 
+syntax errors.
+
+when is it permissable to calculate the sum of two different data types in Python?
+- When the data types are compatible and the operation is valid.
+
+you can add two different data types directly in Python as long as:
+- the data types are compatible
+- the operation is valid

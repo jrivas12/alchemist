@@ -1,0 +1,24 @@
+case 2: {
+            // Find the class with the highest average grade
+          int max_sort = -1;
+            double max_avg_grade = -1.0;
+            for (int i = 0; i < num_classes; i++) {
+                double sum = 0.0;
+                for (int j = 0; j < NUM_GRADES; j++) {
+                    sum += classes[i].grades[j];
+                }
+                double avg_grade = sum / NUM_GRADES;
+                if (avg_grade > max_avg_grade) {
+                    max_sort = i;
+                    max_avg_grade = avg_grade;
+                }
+            }
+    
+            // Output the class with the highest average grade
+            if (max_sort == -1) {
+                std::cout << "No classes found." << std::endl;
+            } else {
+                std::cout << "Class with highest average grade: " << classes[max_sort].subject << std::endl;
+                    }
+                    break;
+                }

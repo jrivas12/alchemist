@@ -1,0 +1,32 @@
+﻿1>------ Build started: Project: program1, Configuration: Debug|Win32 ------
+1>  Employee.cpp
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(10,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(11,19): error C2143: syntax error: missing ',' before '&'
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(17,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(17,16): error C3646: 'birthDate': unknown override specifier
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(18,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(18,16): error C3646: 'hireDate': unknown override specifier
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(18,11): error C2086: 'const int Employee::Date': redefinition
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(8,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(8,15): error C2143: syntax error: missing ',' before '&'
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(11,16): error C2065: 'dateOfBirth': undeclared identifier
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(12,15): error C2065: 'dateOfHire': undeclared identifier
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(12,28): error C2789: 'Employee::Date': an object of const-qualified type must be initialized
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(17,11): message : see declaration of 'Employee::Date'
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(11,5): error C2614: 'Employee': illegal member initialization: 'birthDate' is not a base or member
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(12,5): error C2614: 'Employee': illegal member initialization: 'hireDate' is not a base or member
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(21,12): error C2065: 'hireDate': undeclared identifier
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.cpp(21,52): error C2065: 'birthDate': undeclared identifier
+1>  fig09_22.cpp
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(10,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(11,19): error C2143: syntax error: missing ',' before '&'
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(17,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(17,16): error C3646: 'birthDate': unknown override specifier
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(18,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(18,16): error C3646: 'hireDate': unknown override specifier
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\Employee.h(18,11): error C2086: 'const int Employee::Date': redefinition
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\fig09_22.cpp(10,21): error C2440: 'initializing': cannot convert from 'initializer list' to 'Employee'
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\fig09_22.cpp(10,21): message : 'Employee::Employee': function does not take 4 arguments
+1>C:\Users\joele\OneDrive - South Texas College\Fall 2023\COSC 1337 -  V02\Chapter 9\fig09_22.cpp(10,21): message : while trying to match the argument list '(const char [4], const char [5], Date, Date)'
+1>  Generating Code...
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========

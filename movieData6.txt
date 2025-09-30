@@ -1,0 +1,128 @@
+#include <stdio.h>
+
+struct record{
+        int inputMovie;
+        char title[25];
+        char dir[25];
+        char date[11];
+        int length;
+}movieArray[3];
+
+int archMenu();
+void dataMenu(int i);
+void printMovie(int recordNum);
+void printArchive(int recordNum);
+void readMovie( FILE *fMov);
+void writeMovie( FILE *fMov);
+
+int choiceData=0;
+
+int main(void) {
+        int dataInput=0;
+        int recordNum = 0;
+        do{
+                dataInput = archMenu();
+                switch(dataInput){
+                        case 1:
+                                printf("Initializing archive tools: \n");
+                                dataMenu(recordNum);
+                                recordNum++;
+                                break;
+                                //printMovie(recordNum);
+                                break;
+                        case 3:
+                                printf("Listing all archive data...\n");
+                                //printArchive(recordNum);
+                                break;
+
+                        case 4:
+                                printf("Thanks for using the movie inventory.\n\n");
+                                break;
+                        default:
+                                printf("error: Please enter a correct option!\n");
+                }
+        }while(dataInput!=4);
+        return 0;
+}
+int archMenu() {
+//1. Determinant menu
+        int choice = 0;
+        printf("Welcome to the Movie Library!\n");
+        printf("**************************\n");
+        printf("\nEnter Option\n");
+        printf("\n1) Insert Movie Record\n");
+        printf("\n2) List Movie\n");
+        printf("\n3) Movie Catalog\n");
+        printf("\n4) Exit?\n");
+        printf("**************************\n");
+        do{
+                printf("Option: \n");
+                scanf("%d", &choice);
+        }while(choice<1 || choice>4);
+        return choice;
+}
+void dataMenu(int i) {
+        /*1A newMov data input*/
+        while((getchar())!='\n');
+        printf("\t\tEnter Movie Title: ");
+        fgets(movieArray[i].title,25, stdin);
+        while((getchar())!='\n');
+        printf("\t\tEnter Director: ");
+        fgets(movieArray[i].dir,25, stdin);
+        fflush(stdin);
+        while((getchar())!='\n');
+        printf("\t\tEnter Release Date: ");
+        fgets(movieArray[i].date, 11, stdin);
+        //scanf("%s",&movieArray[i].date);
+        printf("\t\tEnter Length: ");
+        scanf("%d",&movieArray[i].length);
+}
+void writeMovie(FILE *fPtr){
+        FILE *fPtr;
+        fPtr = fopen("program4.txt", "w");
+        char content[1000];
+        if (fPtr != NULL){
+                fgets(content, 100, fPtr);
+        }else{
+                 printf("file inaccesible ");
+        }
+        return writeMovie;
+}
+void printArchive(int recordNum){
+        if(recordNum>0){
+                for(int i=0; i<recordNum; i++){
+                        printf("Title: %s\n", movieArray[i].title);
+                        printf("Director: %s\n", movieArray[i].dir);
+                        printf("Date: %s\n", movieArray[i].date);
+                        printf("Lenght: %d\n", movieArray[i].length);
+                break;
+        }
+}
+
+return recordNum;
+}
+void readMovie(FILE* fPtr){
+        FILE* fPtr;
+        fPtr = fopen("program4.txt", "r");
+
+        if (fPtr != NULL){
+            printf("Successful!");
+            }
+        else{
+                printf("inaccessible file!")
+           }
+        return readMovie;
+}
+//write movie
+void writeMovie(FILE *fPtr){
+        FILE *fPtr;
+        fPtr = fopen("program4.txt", "w");
+        char content[1000];
+        if (fPtr != NULL){
+                fgets(content, 100, fPtr);
+        }else{
+                printf("file inaccesible ");
+        }
+
+        return writeMovie;
+}

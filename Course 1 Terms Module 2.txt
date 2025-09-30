@@ -1,0 +1,1395 @@
+Terms
+expression - a combination of numbers, symbols, or other values that produce a result when evaluated
+
+data types - classes of data (e.g., string, int, float, Boolean, etc.), which include the properties and behaviors of instances of the data type (variables)
+
+variable - an instance of a data type class, represented by a unique name within the code, that stores changeable values of the specific data type
+
+implicit conversion - when the Python interpreter automatically converts one data type to another
+
+explicit conversion - when code is written to manually convert one data type to another using a data type conversion function:
+
+str() - converts a value (often numeric) to a string data type
+
+int() - converts a value (usually a float) to an integer data type
+
+float() - converts a value (usually an integer) to a float data type
+
+
+Variables Annotated by Type
+Type annotations are optional in Python. They can be very helpful, though, because they make code easier to read. Annotations make the variable types clear to those reading the code. They can also help you catch errors during compilation. In the example below, we are using the typing module to annotate the different types of variables.
+
+set_of_numbers: typing.Set[int] = {1, 2, 3}
+
+Coding skills
+
+Skill Group 1
+Use variables to store values
+
+Use basic arithmetic operators with variables to create expressions
+
+Use explicit conversion to change a data type from float to string
+
+# The following lines assign the variable to the left of the = 
+# assignment operator with the values and arithmetic expressions 
+# on the right side of the = assignment operator.
+hotel_room = 100
+tax = hotel_room * 0.08
+total = hotel_room + tax
+room_guests = 4
+share_per_person = total/room_guests
+
+
+# This line outputs the result of the final calculation stored
+# in the variable "share_per_person"
+print("Each person needs to pay: " + str(share_per_person)) # change a data type
+
+Skill Group 2
+Output multiple string variables on a single line to form a sentence
+
+Use the plus (+) connector or a comma to connect strings in a print() function
+
+Create spaces between variables in  a print() function
+
+# The following 5 lines assign strings to a list of variables.
+salutation = "Dr."
+first_name = "Prisha"
+middle_name = "Jai"
+last_name = "Agarwal"
+suffix = "Ph.D."
+ 
+print(salutation + " " + first_name + " " + middle_name + " " + last_name + ", " + suffix) 
+# The comma as a string ", " adds the conventional use of a comma plus a 
+# space to separate the last name from the suffix.
+ 
+# Alternatively, you could use commas in place of the + connector:
+print(salutation, first_name, middle_name, last_name,",", suffix)
+# However, you will find that this produces a space before a comma within a string.
+
+Skill Group 3
+Resolve TypeError caused by a data type mismatch issue
+
+Use an explicit conversion function
+
+# The following code causes a type error between a string 
+# and an integer:
+
+print("5 * 3 = " + str(5*3)) 
+
+
+# Resolution: 
+# print("5 * 3 = " + str(5*3))
+#
+# To avoid a type error between the string and the integer within the
+# print() function, you can make an explicit data type conversion by
+# using the str() function to convert the integer to a string.  
+
+numerator = 7
+denominator = 2   # Possible resolution: Change the denominator value 
+result = (numerator / denominator)
+print(result)
+
+
+# One possible assumption for a number divided by zero error might
+# include the issue of a null value as a denominator (could happen when
+# using a loop to iterate over values in a database). In such cases, the
+# desired outcome may be to leave the numerator value intact. The
+# numerator value can be preserved by reassigning the denominator with 
+# the integer value of 1. The result would then equal the numerator.
+
+def greeting(name):
+    print("Welcome, " + name)
+    
+greeting("Kay")
+greeting("Cameron")
+
+Welcome, Kay
+Welcome, Cameron
+
+def greeting(name, department):
+    print("Welcome, " + name)
+    print("You are part of " + department)
+    
+greeting("Blake", "Software engineering")
+greeting("Ellis", "Software engineering")
+
+Welcome, Blake
+You are part of Software engineering
+Welcome, Ellis
+You are part of Software engineering
+
+___________________________________________________________________________________________
+
+def area_triangle(base, height):
+    return 0.5 * base * height
+
+area_a = area_triangle(5, 4)
+area_b = area_triangle(7, 3)
+
+def area_triangle(base, height):
+    return 0.5 * base * height
+
+# Taking input for the first triangle
+base_a = float(input("Enter the base of the first triangle: "))
+height_a = float(input("Enter the height of the first triangle: "))
+area_a = area_triangle(base_a, height_a)
+print("Area of the first triangle:", area_a)
+
+# Taking input for the second triangle
+base_b = float(input("Enter the base of the second triangle: "))
+height_b = float(input("Enter the height of the second triangle: "))
+area_b = area_triangle(base_b, height_b)
+print("Area of the second triangle:", area_b)
+
+# Calculating the sum of areas
+sum = area_a + area_b
+print("The sum of both areas is:", sum)
+
+
+def area_triangle(base, height):
+    return base*height/2
+area_a = area_triangle(5,4)
+area_b = area_triangle(7,3)
+sum = area_a + area_b
+print("The sum of both areas is: " + str(sum))
+
+# Example usage:
+total_seconds = 3665  # Replace this with your desired number of seconds
+hours, minutes, remaining_seconds = convert_seconds(total_seconds)
+
+print(f"{total_seconds} seconds is equal to {hours} hours, {minutes} minutes, and {remaining_seconds} seconds.")
+
+def convert_seconds(seconds):
+    hours = seconds // 3600
+    minutes = (seconds - hours * 3600) // 60
+    remaining_seconds = seconds - hours * 3600 - minutes * 60
+    return hours, minutes, remaining_seconds
+
+# Example usage:
+total_seconds = 3665
+hours, minutes, remaining_seconds = convert_seconds(total_seconds)
+
+# Define terms before the f-string
+total_seconds, hours, minutes, remaining_seconds = 3665, *convert_seconds(3665)
+print(f"{total_seconds} seconds is equal to {hours} hours, {minutes} minutes, and {remaining_seconds} seconds.")
+
+hours = 2  # Replace this with your desired number of hours
+total_seconds = hours * 3600  # Convert hours to seconds
+hours, minutes, seconds = convert_seconds(total_seconds)
+print(hours, minutes, seconds)
+
+def convert_seconds(seconds):
+    hours = seconds // 3600
+    minutes = (seconds - hours * 3600) // 60
+    remaining_seconds = seconds - hours * 3600 - minutes * 60
+    return hours, minutes, remaining_seconds
+ 
+hours, minutes, seconds = convert_seconds(5000)
+print(hours, minutes, seconds)
+
+def greeting(name):
+    print("Welcome, " + name)
+result = greeting("Christine")
+print(result)
+
+name = "Kay"
+number = len(name) * 9
+
+print("Hello " + name + ". Your lucky number is " + str(number))
+
+name = "Cameron"
+number = len(name) * 9
+
+print("Hello " + name + ". Your lucky number is " + str(number))
+
+output:
+
+Hello Kay. Your lucky number is 27
+Hello Cameron. Your lucky number is 63
+
+
+def lucky_number(name):
+    number = len(name) * 9
+    print("Hello " + name + ". Your lucky number is " + str(number))
+
+lucky_number("Kay")
+lucky_number("Cameron")
+
+output: 
+
+Hello Kay. Your lucky number is 27
+Hello Cameron. Your lucky number is 63
+
+def calculate(d):
+    q = 3.14
+    z = q * (d ** 2)
+    print(z)
+
+calculate(5)
+#Output is 78.5
+
+output: 
+
+78.5
+
+def circle_area(radius):
+    pi = 3.14
+    area = pi * (radius ** 2)
+    print(area)
+
+circle_area(5)
+
+output: 
+
+78.5
+
+
+# are passed to the function through the function’s parameters.
+def find_total_days(years, months, days):
+# Assign a variable to hold the calculations for the number of days in
+# a year (years*365) plus the number of days in a month (months*30) plus
+# the number of days provided through the "days" parameter variable.
+    my_days = (years*365) + (months*30) + days
+# Use the "return" keyword to send the result of the "my_days"  
+# calculation to the function call. 
+    return my_days
+ 
+# Function call with user provided parameter values. 
+print(find_total_days(2,5,23))
+
+output: 
+
+903
+
+
+def convert_volume(fluid_ounces):
+    milliliters = fluid_ounces * 29.5735  # Approximate conversion factor
+    return milliliters
+
+# Call the conversion from within the print() function using 2 fluid ounces.
+# Convert the return value from a float to a string.
+print("The volume in milliliters is " + str(convert_volume(2)))
+
+# Call the function again and double the 2 fluid ounces from within
+# the print function.
+print("The volume in milliliters is " + str(convert_volume(2) * 2))
+# Alternative calculation:
+# print("The volume in milliliters is " + str(convert_volume(4)))
+
+output:
+
+The volume in milliliters is 59.147
+The volume in milliliters is 118.294
+
+def convert_distance(km):
+	m = km * 1000  # exactly 1000 meters in 1 kilometer
+	return m
+
+
+# Do not indent any of the following lines of code as they are
+# meant to be located outside of the function above
+
+
+my_trip_kilometers = 55
+
+
+# 2) Convert my_trip_kilometers to meters by calling the function above
+my_trip_meters = int(my_trip_kilometers)
+
+
+# 3) Fill in the blank to print the result of converting my_trip_kilometers
+print("The distance in meters is " + str(my_trip_meters))
+
+output: 
+
+The distance in meters is 55
+
+def print_seconds(hours, minutes, seconds):
+   total_seconds = hours * 3600 + minutes * 60 + seconds
+   print(total_seconds)
+
+print_seconds(1,2,3)
+#output will print to the screen
+
+output: 
+
+3723
+
+# 1) Complete the code to return the result of the conversion
+def convert_distance(km):
+	# m = km * 1000 exactly 1000 meters in 1 kilometer
+	return km * 1000
+
+
+# Do not indent any of the following lines of code as they are
+# meant to be located outside of the function above
+
+
+my_trip_kilometers = 55
+
+
+# 2) Convert my_trip_kilometers to meters by calling the function above
+my_trip_meters = convert_distance(my_trip_kilometers)
+
+
+# 3) Fill in the blank to print the result of converting my_trip_kilometers
+print("The distance in meters is " + str(my_trip_meters))
+
+output:
+
+The distance in meters is 55000
+
+______________________________________________________________________________________________________
+
+
+print(10>1)
+#True
+print("cat" == "dog")
+#False
+print (1 != 2)
+#True
+
+
+print(str(1) < "1")
+#False
+
+print(1 == "1")
+#False
+
+
+print("Yellow" > "Cyan" and "Brown" > "Magenta")
+#False
+
+print(25 > 50 or 1 != 2)
+#True
+
+
+print(not 42 == "Answer")
+#True
+
+logical operators:
+
+==    (equality) 
+
+!=     (not equal to) 
+
+>       (greater than)
+
+<      (less than)
+
+>=    (greater than or equal to)
+
+<=    (less than or equal to)
+
+
+print(32 == 30+2)   # The == operator checks if the 2 values are 
+True                # equal to each other. If they are equal, 
+                    # Python returns a True result.
+
+
+print(5+10 == 6+7)  # If the two values are not equal, as in the
+False               # expression 5+10 == 6+7 (or 15 == 13), Python          
+                    # returns a False result.
+
+
+print(10-4 != 10+4) # The != operator checks if the 2 values are
+True                # NOT equal to each other. If true, Python              
+                    # returns a True result. 
+
+
+print(9/3 != 3*1)   # In this last example, 9/3 != 3*1 (or 3 != 3)
+False               # is false. So, Python returns a False value.
+
+output:
+
+True
+False
+True
+False
+False
+
+# The == operator can check if two strings are equal to each other. 
+# If they are equal, the Python interpreter returns a True result.
+print("a string" == "a string")
+True
+
+
+# In this example, the equality == comparison is between "4 + 5" and
+# 4 + 5. Since the left data type is a string and the right data type
+# is an integer, the two values cannot be equal. So, the comparison
+# returns a False result.
+print("4 + 5" == 4 + 5)
+False
+
+
+# The != operator can check if the two strings are NOT equal to each
+# other. If they are indeed not equal, then Python returns a True result.
+print("rabbit" != "frog")
+True
+
+
+# In this example, the variable event_city has been assigned the string 
+# value "Shanghai". This variable is compared to a static string, 
+# "Shanghai", using the != operator. As, the strings "Shanghai" and 
+# "Shanghai" are the same, the comparison of "Shanghai" != "Shanghai" 
+# is false. Accordingly, Python will return a False result.
+event_city = "Shanghai"
+print(event_city != "Shanghai")
+False
+
+# This last example illustrates the result of trying to compare two
+# items of different data types using the equality == operator. The
+# two items are not equal, so the comparison returns False.
+print("three" == 3)
+False
+
+output:
+
+True
+False
+True
+False
+False
+False
+
+# Example 1
+
+print((6*3 >= 18) and (9+9 <= 36/2))
+
+
+output:
+
+True
+
+# Example 2
+
+print("Nairobi" < "Milan" and "Nairobi" > "Hanoi")
+
+output:
+
+False
+
+# True or True returns True
+print((15/3 < 2+4) or (0 >= 6-7))
+True
+
+# False or True returns True
+print(country == "New York City" or city == "New York City")
+True
+
+# True or False returns True
+print(16 <= 4**2 or 9**(0.5) != 3)
+True
+
+# False or False returns False
+print("B_name" > "C_name" or "B_name" < "A_name")
+
+
+# Test Example 1:
+
+x = 2*3 > 6
+print("The value of x is:")
+print(x)
+
+print("")  # Prints a blank line
+
+print("The inverse value of x is:")
+print(not x)
+
+output:
+
+
+The value of x is:
+False
+
+The inverse value of x is:
+True
+
+
+
+today = "Monday"
+print(not today == "Tuesday") 
+
+output:
+
+True
+
+Expression
+
+Description
+
+a == a and a != b
+
+True if both sides are True, otherwise False.
+
+a > b or a <= c
+
+True if either side is True. False if both sides are False.
+
+not a == b
+
+True if the statement is False, False if the statement is True.
+
+
+
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        print("Valid username")
+
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    return False
+    
+result1 = is_even(4)  # Output: True
+result2 = is_even(7)  # Output: False
+
+print(result1)
+print(result2)
+
+output: 
+
+True 
+False
+
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    elif len(username) > 15:
+        print("Invalid username. Must be at most 15 characters long")
+    else:
+        print("Valid username")
+
+# Example usage:
+hint_username("ab")   # Output: "Invalid username. Must be at least 3 characters long"
+hint_username("abcdefghijklmno")  # Output: "Invalid username. Must be at most 15 characters long"
+hint_username("valid_username")   # Output: "Valid username"
+
+
+output:
+
+Invalid username. Must be at least 3 characters long
+Valid username
+Valid username
+
+def hint_username(username):
+    username_length = len(username)
+
+    if username_length < 3:
+        print(f"Error: Username '{username}' is too short. Must be at least 3 characters long.")
+    elif username_length > 15:
+        print(f"Error: Username '{username}' is too long. Must be at most 15 characters long.")
+    else:
+        print(f"Valid username: {username}")
+
+# Example usage:
+hint_username("ab")   # Output: "Error: Username 'ab' is too short. Must be at least 3 characters long."
+hint_username("valid_username")   # Output: "Valid username: valid_username"
+hint_username("a_very_long_username")  # Output: "Error: Username 'a_very_long_username' is too long. Must be at most 15 characters long."
+
+
+output:
+
+Error: Username 'ab' is too short. Must be at least 3 characters long.
+Valid username: valid_username
+Error: Username 'a_very_long_username' is too long. Must be at most 15 characters long.
+
+Comparison operators with numerical values
+Comparison expressions return a Boolean result (True or False). 
+
+x == y        If x is equal to y, return True. Else, return False.
+
+x != y         If x is not equal to y, return True. Else, return False.
+
+x < y          If x is less than y, return True. Else, return False.
+
+x <= y        If x is less than or equal to y, return True. Else, return False.
+
+x > y          If x is greater than y, return True. Else, return False.
+
+x >= y        If x is greater or equal to y, return True. Else, return False.
+
+Comparison operators with strings
+Comparison expressions with strings also return a Boolean result (True or False).
+
+"x" == "y"  If the words are the same, return True. Else, return False.
+
+"x" != "y"   If the words are not the same, return True. Else, return False.
+
+When used with strings, the following comparison expressions will alphabetize the strings.
+
+"x" < "y"   	If string "x"  has a smaller Unicode value than string "y", return True.  Else, return False.
+
+"x" <= "y" 	If the Unicode value for string "x" is smaller than or equal to the Unicode value of string "y", return True. Else, return False.
+
+"x" > "y"    	If string "x" has a larger Unicode value than string "y", return True. Else, return False.
+
+"x" >= "y"  	If the Unicode value for string "x" is greater than or equal to the Unicode value of string "y", return True. Else, return False.
+
+
+# The value of 10*4 (40) is greater than 14+23 (37), therefore this 
+# comparison expression will return the Boolean value of True.
+
+
+print(10*4 > 14+23) # Should print True
+
+# The letter "t" has a Unicode value of 116 and the letter "s" has a
+# Unicode value of 115. Since 116 is not less than 115, the 
+# comparison of "tall" < "short" (or 116 < 115) is False. 
+
+print("tall" < "short")  # Should print False
+
+output:
+
+True 
+False
+
+def greeting(name):
+  if name == "Taylor":
+    return "Welcome back Taylor!"
+  else:
+    return "Hello there, " + name
+
+print(greeting("Taylor"))
+print(greeting("John"))
+
+output:
+
+Welcome back Taylor!
+Hello there, John
+
+number = 10
+
+if number > 11: 
+  print(0)
+elif number != 10:
+  print(1)
+elif number >= 20 or number < 12:
+  print(2)
+else:
+  print(3)
+
+output: 
+
+2
+
+_______________________________________________________________________________________
+
+Constructors and Other Special Methods
+
+
+class Apple:
+    def __init__(self):
+        self.color = "red"
+        self.flavor = "sweet"
+
+honeycrisp = Apple()
+print(honeycrisp.color)
+
+# prints "red"
+
+
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+honeycrisp = Apple("red", "sweet")
+fuji = Apple("red", "tart")
+print(honeycrisp.flavor)
+print(fuji.flavor)
+
+# prints "sweet" and "tart"
+
+
+
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+    def __str__(self):
+        return "an apple which is {} and {}".format(self.color, self.flavor)
+
+honeycrisp = Apple("red", "sweet")
+print(honeycrisp)
+
+# prints "an apple which is red and sweet"
+
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+
+jonagold = Apple("red", "sweet")
+print(jonagold.color)
+
+
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color, self.flavor)
+
+
+
+Different types of special operators  
+Python supports a variety of different operators that you can use in your code to make life easier for you. Some of the more common operators are:
+
+Arithmetic operators. These include + (addition), - (subtraction), * (multiplication), / (division), and ** (exponentiation).
+
+Comparison operators. These include == (equality), != (inequality), < (less than), and  >= (greater than or equal to)
+
+Logical operators. These include and, or, and not.
+
+Assignment operators. These include = (simple assignment), += (addition assignment), and  %= (modulo assignment)
+
+Note: This is not an all-inclusive list, but different examples of common operators that you would use in Python.
+
+Performing special operations
+Every special operator has a corresponding dunder method that implements the operation. In Python, you denote a dunder method by placing double underscores at the beginning and end of the name; in fact, the term “dunder” comes from this use of double underscores. You can change how an operator behaves with an instance of your object by overriding the implementation. Let’s look at an example:
+
+
+
+
+class Triangle:
+
+  def __init__(self, base, height):
+
+    self.base = base
+
+    self.height = height
+
+In this example, the Triangle class has a method __init__()which is called a constructor and is used to initialize the object’s attributes.
+
+  def area(self):
+
+    return 0.5 * self.base * self.height
+
+This part of the code, area(self) method, computes the area of the triangle based on its height and base length.
+
+  def __add__(self, other):
+
+    return self.area() + other.area()
+
+This method overrides the + operator to "add" two triangles together.
+
+triangle1 = Triangle(10, 5)
+
+triangle2 = Triangle(6, 8)
+
+print("The area of triangle 1 is", triangle1.area())
+
+print("The area of triangle 2 is", triangle2.area())
+
+print("The area of both triangles is", triangle1 + triangle2)
+
+
+The output of this problem is:
+
+The area of triangle 1 is 25.0 
+
+The area of triangle 2 is 24.0 
+
+The area of both triangles is 49.0
+
+
+
+
+class Triangle:
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+    def area(self):
+        return 0.5 * self.base * self.height
+    def __add__(self, other):
+        return self.area() + other.area()
+    
+triangle1 = Triangle(10, 5)
+triangle2 = Triangle(6, 8)
+print("The area of triangle 1 is", triangle1.area())
+print("The area of triangle 2 is", triangle2.area())
+print("The area of both triangles is", triangle1 + triangle2)
+
+
+
+
+class ClassName:
+    def method_name(self, other_parameters):
+        # Your actual code for the method goes here
+        result = "This is the result based on other_parameters: {}".format(other_parameters)
+        print(result)
+
+# Create an instance of the class
+my_instance = ClassName()
+
+# Call the method with some parameters
+my_instance.method_name("example_parameter")
+
+
+
+TERMS AND DEFINITIONS FROM COURSE 1, MODULE 2:
+
+
+
+Built-in functions: Functions that exist within Python and can be called directly
+
+Comments: Notes to yourself and/or other programmers to make the purpose of the code clear
+
+Data types: Classes of data (e.g., string, int, float, Boolean, etc.), which include the properties and behaviors of instances of the data type (variables)
+
+Explicit conversion: This occurs when code is written to manually convert one data type to another using a data type conversion function
+
+Expression: A combination of numbers, symbols, or other values that produce a result when evaluated
+
+Implicit conversion: This occurs when the Python interpreter automatically converts one data type to another
+
+Logical operators: Operators used to combine or manipulate boolean values (True or False) to create complex conditions for decision-making. 
+
+Parameter (argument): A value passed into a function for use within the function, controlling the behavior of the CSV reader and writer
+
+Refactoring: When a code is updated to be more self-documenting and clarify the intent 
+
+Return value: This is the value or variable returned as the end result of a function
+
+
+
+
+
+# A function is created with the def() keyword. The parameter
+# variable "time_as_string" is passed to the function through a 
+# call to the function.
+def task_reminder(time_as_string):
+
+    # The following if-elif-else block assigns various strings to
+    # the variable "task" depending on specific conditions. The
+    # test conditions are set using the == equality comparison 
+    # operator. In this case, the time passed through the 
+    # "time_as_string" parameter variable is tested as the 
+    # specific condition. So, if the time  is "11:30 a.m.", then 
+    # "task" is assigned the value: "Run TPS report".
+    if time_as_string == "8:00 a.m.":
+        task = "Check overnight backup images"
+    elif time_as_string == "11:30 a.m.":
+        task = "Run TPS report"
+    elif time_as_string == "5:30 p.m.":
+        task = "Reboot servers"
+    # The else statement is a catchall for all other values of 
+    # the "time_as_string" parameter variable not listed in the
+    # if-elif block of code.
+    else:
+        task = "Provide IT Support to employees"
+
+    # This line returns the value of "task" to the function call.
+    return task
+
+# This line calls the function and passes a parameter  
+# ("10:00 a.m.") to the function.
+print(task_reminder("10:00 a.m."))
+# Should print "Provide IT Support to employees"
+
+output: 
+
+
+Provide IT Support to employees
+
+
+# Example 1
+# Evaluate the output of this print statement
+
+def product(a, b):
+        return(a*b)
+
+print(product(product(2,4), product(3,5)))
+ 
+#################################
+
+# Example 2 
+# Evaluate the output of this print statement
+
+def difference(a, b):
+        return(a-b)
+
+def sum(a, b):
+        return(a+b)
+
+print(difference(sum(2,2), sum(3,3)))
+
+
+#################################
+
+
+# Example 3
+# Evaluate the Boolean output of this comparison
+
+
+print((5 >= 2*4) and (5 <= 4*3))
+
+
+#################################
+
+
+# Example 4 
+# Evaluate the value of the comparison in the if statement 
+
+
+x = 3
+if x+5 > x**2 or x % 4 != 0:
+        print("This comparison is True")
+
+
+#################################
+
+
+# Example 5 
+# Evaluate the output of this if-elif-else statement
+
+
+
+number = 6
+if number * 2 < 14:
+        print(number * 6 % 3)
+elif number > 7:
+        print(100 / number)
+else:
+        print(7 - number)
+
+
+# Click Run to check your answers. If you are having trouble 
+# calculating the correct answers manually, please review the
+# Practice Quiz Study Guides, videos, and readings in this Module.
+
+
+output:
+
+120
+-2
+False
+This comparison is True
+0
+
+
+def get_remainder(x, y):
+ 
+  if x == 0 or y == 0 or x ==y:
+    remainder = 0
+  else:
+    remainder = (x % y) / y
+  return remainder
+
+
+print(get_remainder(10, 3))
+
+output:
+
+0.3333333333333333
+
+name = "Marjery"
+home_address = "1234 Mockingbird Lane"
+print(f"{name} lives at her home address of {home_address}")
+# Should print "Marjery lives at her home address of 1234 Mockingbird Lane"
+
+output:
+
+Marjery lives at her home address of 1234 Mockingbird Lane
+
+
+7 < "number"
+
+output:
+
+TypeError
+
+def identify_IP(IP_address):
+    if IP_address == "192.168.1.1":
+        IP_description = "Network router"
+    elif IP_address == "8.8.8.8" or IP_address == "8.8.4.4":
+        IP_description = "Google DNS server"
+    elif IP_address == "142.250.191.46":
+        IP_description = "Google.com"
+    else:
+        IP_description = "unknown"
+    return IP_description
+
+
+print(identify_IP("8.8.4.4")) # Should print 'Google DNS server'
+print(identify_IP("142.250.191.46")) # Should print 'Google.com'
+print(identify_IP("192.168.1.1")) # Should print 'Network router'
+print(identify_IP("8.8.8.8")) # Should print 'Google DNS server'
+print(identify_IP("10.10.10.10")) # Should print 'unknown'
+print(identify_IP("")) # Should Should print 'unknown'
+
+output:
+
+Google DNS server
+Google.com
+Network router
+Google DNS server
+unknown
+unknown
+
+def difference(x, y):
+    z = x - y
+    return z
+
+
+print(difference(5, 3))
+
+output:
+
+2
+
+def fractional_part(numerator, denominator):
+    # Operate with numerator and denominator to
+    # keep just the fractional part of the quotient 
+    if denominator == 0:
+        return "undefined"
+    else:
+        quotient = numerator / denominator
+        integer_part = numerator // denominator
+        fractional_part = quotient - integer_part
+    return fractional_part
+
+print(fractional_part(5, 5))  # Should print 0.0
+print(fractional_part(5, 4))  # Should print 0.25
+print(fractional_part(5, 3))  # Should print approx 0.666
+print(fractional_part(5, 2))  # Should print 0.5
+print(fractional_part(5, 0))  # Should print "undefined"
+print(fractional_part(0, 5))  # Should print 0.0
+
+x =   0
+while x < 5:
+    print("Not there yet, x=" + str(x))
+    x = x + 1
+print("x=" + str(x))
+
+output:
+
+Not there yet, x=0
+Not there yet, x=1
+Not there yet, x=2
+Not there yet, x=3
+Not there yet, x=4
+x=5
+
+
+x = 0
+while x < 5:
+    print("Not there yet, x=" + str(x))
+    x = x + 1
+print("x=" + str(x))
+x=5 
+
+output:
+
+Not there yet, x=0
+Not there yet, x=1
+Not there yet, x=2
+Not there yet, x=3
+Not there yet, x=4
+x=5
+5
+
+def get_username():
+    # This function could ask the user to input a username
+    username = input("Please enter a username: ")
+    return username
+
+def valid_username(username):
+    # This function could check if the username meets certain criteria
+    # For example, let's say a valid username is at least 3 characters long
+    if len(username) == 3:
+        return False
+    else:
+        return True
+
+username = get_username()
+while not valid_username(username):
+    print("Invalid username")
+    username = get_username()
+
+output:
+
+Please enter a username: joe
+Invalid username
+Please enter a username: Jacob
+
+
+def get_username():
+    # This function could ask the user to input a username
+    username = input("Please enter a username: ")
+    return username
+
+def valid_username(username):
+    # This function could check if the username meets certain criteria
+    # For example, let's say a valid username is at least 3 characters long
+    if len(username) == 3:
+        return False
+    else:
+        return True
+
+username = get_username()
+while not valid_username(username):
+    print("Invalid username")
+    username = get_username()
+else:
+    print(f'Welcome Back {username}')
+
+output:
+
+Please enter a username: joe
+Invalid username
+Please enter a username: jacob
+Welcome Back jacob
+
+def attempts(n):
+    x = 1
+    while x <= n:
+        print("Attempt " + str(x))
+        x += 1
+    print("Done")
+
+attempts(5)
+
+output:
+
+Attempt 1
+Attempt 2
+Attempt 3
+Attempt 4
+Attempt 5
+Done
+
+my_variable = 0
+while my_variable < 10:
+    print("Hello")
+    my_variable += 1
+
+output:
+
+Hello
+Hello
+Hello
+Hello
+Hello
+
+x = 1
+sum = 0
+while x < 10:
+    sum = sum + x
+    x = x + 1
+
+product = 1
+while x < 10:
+    product = product * x
+    x = x + 1
+
+print(sum, product)
+
+ouput:
+
+45 1
+
+x = 8  # Define x before using it in the loop
+
+while x != 0 and x % 2 == 0:
+    x = x / 2
+# This loop will keep dividing x by 2 as long as x is not 0 and x is even.
+
+x = 8  # Reset x to its original value
+
+if x != 0:
+    while x % 2 == 0:
+        x = x / 2
+# This code does the same thing as the first loop, but it checks if x is not 0 before entering the loop.
+
+x = 8  # Reset x to its original value
+
+while x % 2 == 0:
+    x = x / 2
+# This loop will keep dividing x by 2 as long as x is even. If x is initially 0, it will result in an infinite loop.
+
+
+output:
+
+5
+10
+15
+20
+25
+30
+35
+45
+50
+Done
+
+
+# This function counts the number of integer factors for a 
+# "given_number" variable, passed through the function’s parameters.
+# The "count" return value includes the "given_number" itself as a 
+# factor (n*1). 
+def count_factors(given_number):
+
+    # To include the "given_number" variable as a "factor", initialize
+    # the "factor" variable with the value 1 (if the "factor" variable
+    # were to start at 2, the "given_number" itself would be excluded). 
+    factor = 1
+    count = 1
+
+    # This "if" block will run if the "given_number" equals 0.
+    if given_number == 0:
+        # If True, the return value will be 0 factors. 
+        return 0
+
+    # The while loop will run while the "factor" is still less than
+    # the "given_number" variable.
+    while factor < given_number:
+        # This "if" block checks if the "given_number" can be divided by
+        # the "factor" variable without leaving a remainder. The modulo
+        # operator % is used to test for a remainder.
+        if given_number % factor == 0:
+            # If True, then the "factor" variable is added to the count of
+            # the "given_number"’s integer factors.
+            count += 1
+        # When exiting the if block, increment the "factor" variable by 1
+        # to divide the "given_number" variable by a new "factor" value
+        # inside the while loop.
+        factor += 1
+
+    # When the interpreter exits either the while loop or the top if
+    # block, it will return the value of the "count" variable.
+    return count
+
+
+print(count_factors(0)) # Count value should be 0
+print(count_factors(3)) # Should count 2 factors (1x3)
+print(count_factors(10)) # Should count 4 factors (1x10, 2x5)
+print(count_factors(24)) # Should count 8 factors (1x24, 2x12, 3x8, and 4x6).
+
+
+output:
+
+0
+2
+4
+8
+
+# This function outputs an addition table. It is written to end after
+# printing 5 lines of the addition table, but it will break out of the
+# loop if the "my_sum" variable exceeds 20.
+
+# The function accepts a "given_number" variable through its
+# parameters.
+def addition_table(given_number):
+
+	# The "iterated_number" and "my_sum" variables are initialized with
+	# the value of 1. Although the "my_sum" variable does not need any
+	# specific initial value, it still must be assigned a data type
+	# before being used in the while loop. By initializing "my_sum"
+	# with any integer, the data type will be set to int.
+	iterated_number = 1
+	my_sum = 1
+
+	# The while loop will run while it is True that the
+	# "iterated_number" is less than or equal to 5.
+	while iterated_number <= 5:
+
+		# The "my_sum" variable is assigned the value of the
+		# "given_number" plus the "iterated_number" variables.
+		my_sum = given_number + iterated_number
+
+		# Test to see if the "my_sum" variable is greater than 20.
+		if my_sum > 20:
+			# If True, then use the break keyword to exit the loop.
+			break
+
+		# If False, the Python interpreter will move to the next line
+		# in the while loop after the if-statement has ended.
+
+		# The print function will output the "given_number" plus
+		# the "iterated_number" equals "my_sum".
+		print(str(given_number), "+", str(iterated_number), "=", str(my_sum))
+
+		# Increment the "iterated_number" before the while loop starts
+		# over again to print a new "my_sum" value.
+		iterated_number += 1
+
+
+addition_table(5)
+addition_table(17)
+addition_table(30)
+
+output:
+
+5 + 1 = 6
+5 + 2 = 7
+5 + 3 = 8
+5 + 4 = 9
+5 + 5 = 10
+17 + 1 = 18
+17 + 2 = 19
+17 + 3 = 20
+None
+
+
+
+def is_power_of_two(number):
+  # This while loop checks if the "number" can be divided by two
+  # without leaving a remainder. How can you change the while loop to
+  # avoid a Python ZeroDivisionError?
+  if number == 0:
+      return False
+  while number % 2 == 0:
+    number = number / 2
+  # If after dividing by 2 "number" equals 1, then "number" is a power
+  # of 2.
+  if number == 1:
+    return True
+  else:
+    return False
+  
+# Calls to the function
+print(is_power_of_two(0)) # Should be False
+print(is_power_of_two(1)) # Should be True
+print(is_power_of_two(8)) # Should be True
+print(is_power_of_two(9)) # Should be False
+
+output:
+
+False
+True
+True
+False
+
+def sum_of_integers(n):
+    if n < 1:
+        return 0
+
+    i = 1
+    sum = 0
+    while i <= n:
+        sum = sum + i
+        i = i + 1
+
+    return sum
+
+print(sum_of_integers(3))  # should print 6
+print(sum_of_integers(4))  # should print 10
+print(sum_of_integers(5))  # should print 15
+
+
+output:
+
+6
+10
+15
+
+

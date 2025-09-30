@@ -1,0 +1,105 @@
+#include <stdio.h>
+
+struct record{
+        int inputMovie;
+        char title[25];
+        char dir[25];
+        char date[11];
+        char length[5];
+}movieArray[3];
+
+int choiceData=0;
+int archMenu();
+void dataMenu(int i);
+void printArchive(int recordNum);
+
+int main(void) {
+    
+    FILE * fp;
+        int dataInput=0;
+        int recordNum = 0;
+        do{
+                dataInput = archMenu();
+                switch(dataInput){
+                        case 1:
+                                FILE * fp;
+                                fp = fopen("movie.txt", "a+");
+                                printf("Initializing archive tools: \n");
+                                dataMenu(recordNum);
+                                recordNum++;
+                                //break;
+                                //printMovie(recordNum);
+                                fclose;
+                                break;
+                        case 2:
+                                FILE * fp2;
+                                fp2=fopen("movie.txt","a+");
+                                printf("Initializing archive tools: \n");
+                                dataMenu(recordNum);
+                                recordNum++;
+                                //break;
+                                //printMovie(recordNum);
+                                fclose;
+                                break; 
+                        case 3:
+                            
+                                FILE * fp3;
+                                fp3=fopen("movie.txt","a+");
+                                printf("Initializing archive tools: \n");
+                                dataMenu(recordNum);
+                                recordNum++;
+                                //break;
+                                //printMovie(recordNum);
+                                fprintf;
+                                break;        
+                        
+                        case 4:
+                                printf("Thanks for using the movie inventory.\n\n");
+                                break;
+                        default:
+                                printf("error: Please enter a correct option!\n");
+                }
+        }while(dataInput!=4);
+        fclose!=feof;
+}
+int archMenu() {
+        FILE *fp;
+        fp = fopen("movie.txt", "r+");
+        int choice=0;
+        printf("Welcome to the Movie Library!\n");
+        printf("**************************\n");
+        printf("\nEnter Option\n");
+        printf("\n1) Insert Movie One\n");
+        printf("\n2) Insert Movie Two\n");
+        printf("\n3) Insert Movie Three\n");
+        printf("\n4) Exit?\n");
+        printf("**************************\n");
+        do{
+                printf("Option: \n");
+                scanf("%d", &choice);
+        }while(choice<1 || choice>4);
+        return choice;
+}      
+
+
+void dataMenu(int i) {
+    FILE * fp;
+    fp = fopen("movie.txt", "w+");
+   
+        while((getchar())!='\n');
+        printf("\t\tEnter Movie Title: ");
+        fgets(movieArray[i].title,25, stdin);
+                while((getchar())!='\n');
+        printf("\t\tEnter Director: ");
+        fgets(movieArray[i].dir,25, stdin);
+              while((getchar())!='\n');
+        printf("\t\tEnter Release Date: ");
+        fgets(movieArray[i].date,11, stdin);
+        fflush(stdin);
+        while((getchar())!='\n');
+        printf("\t\tEnter Length: ");
+        fgets(movieArray[i].length, 5, stdin);
+  
+   fprintf;
+    
+}

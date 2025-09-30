@@ -1,0 +1,97 @@
+login as: jrivas12
+Keyboard-interactive authentication prompts from server:
+| Password:
+| Duo two-factor login for jrivas12
+|
+| Enter a passcode or select one of the following options:
+|
+|  1. Duo Push to XXX-XXX-2599
+|  2. Phone call to XXX-XXX-2599
+|  3. SMS passcodes to XXX-XXX-2599
+|
+| Passcode or option (1-3): 1
+End of keyboard-interactive prompts from server
+Success. Logging you in...
+Last login: Thu Dec  8 10:09:28 2022 from 72.180.129.209
+[jrivas12@greenfield ~]$ ls
+chapter10  chapter11  chapter2  chapter3  chapter4  chapter5  chapter6  chapter7  final  sample  tests
+[jrivas12@greenfield ~]$ cd chapter4
+[jrivas12@greenfield chapter4]$ ;s
+-bash: syntax error near unexpected token `;'
+[jrivas12@greenfield chapter4]$ cd chapter5
+-bash: cd: chapter5: No such file or directory
+[jrivas12@greenfield chapter4]$ ls
+program1.c    program2.c    program3.c    program4.c    program5.c    program6.c
+program1.exe  program2.exe  program3.exe  program4.exe  program5.exe  program6.exe
+[jrivas12@greenfield chapter4]$ vi program6.c
+[jrivas12@greenfield chapter4]$ gcc program6.c -o program6.exe -std=c99
+program6.c: In function ‘main’:
+program6.c:6:2: error: ‘print’ undeclared (first use in this function)
+  print
+  ^
+program6.c:6:2: note: each undeclared identifier is reported only once for each function it appears in
+program6.c:7:2: error: expected ‘;’ before ‘int’
+  int choice;
+#include <stdio.h>
+#define STUDENTS 2
+#define EXAMS 4
+
+int minimum(const int grades[] [EXAMS], int pupils, int test);
+int maximum(const int grades[] [EXAMS], int pupils, int test);
+double average(const int setOfGrades [], int test);
+void printArray(const int grades[][EXAMS], int pupils, int test);
+
+
+int main (void);{
+
+int student;
+
+const int studentGrades[STUDENTS][EXAMS]=
+{{77, 68, 86, 73},
+{96, 87, 89, 78},
+{70, 90, 86, 81}};
+
+printf("The array is:\n");
+printArray(studentGrades, STUDENTS, EXAMS);
+
+printf("\n\nLowest grade: %d\nHighest grade:%d\n",
+                minimum(studentGrades, STUDENTS, EXAMs),
+                maximum(studentGrades, STUDENTS, EXAMS));
+        for(student = 0;student < STUDENTS; student++){
+        printf("The average grade for student %d is %.2f\n"),
+                student, average(studentGrades[student], EXAMS));
+        }
+return 0;
+}
+int minimum(const int grades[][EXAMS], int pupils, int tests)
+{
+        int i;
+        int j;
+        int lowGrade = 100;
+
+        for (i = 0; i < pupils; i++){
+                for(j = 0; j < tests; j++){
+                        if(grades[i][j] < lowGrade){
+                                lowgrade = grades [i][j];
+                        }
+                }
+        }
+        return lowGrade;
+}
+int minimum(const int grades[][EXAMS], int pupils, int tests)
+{
+        int i;
+        int j;
+        int highGrade = 0;
+
+        for (i = 0; i < pupils; i++){
+               for(j = 0; j < tests; j++){
+                       if(grades[i][j] > highGrade){
+                               highgrade = grades [i][j];
+                       }
+                }
+        }
+         return highGrade;
+}
+~
+                                                                                                                                                                                                                           12,0-1        All
