@@ -176,163 +176,212 @@
    END OF TERMS AND CONDITIONS
 
 =======================================================================
-APPENDIX:  
+APPENDIX:
 
-   This repository contains the following C++ main, header and implementation source codes and text files.
-   They are provided under the Apache License, Version 2.0. Titles are
-   preserved as-is. Where a file name suggests coursework, homework, or
-   exams, no additional description is provided.
+   This repository contains the following C++, C, header, text, and configuration
+   source files. They are provided under the Apache License, Version 2.0.  
+   Titles are preserved as-is. Where a file name suggests coursework, homework,  
+   or exams, no additional description is provided.
 
-   - account.cpp
-   - airline ticket.txt
-   - airline.txt
-   - atm.cpp
-   - averages.txt
-   - backup.cpp
-   - Bank.cpp
-   - Bubblesort_Linked_List_2.cpp
-   - Bubblesort_Linked_List.cpp
-   - car.cpp
-   - challange1 prog4.txt
-   - challange1 prog5.txt
-   - circuit_schematic.cpp
-   - code 6.txt
-   - coin.cpp
-   - ConsoleApplication1.cpp
-   - ConsoleApplication3.cpp
-   - correctcase2.txt
-   - Course 1 Terms Module 1.txt
-   - Course 1 Terms Module 2.txt
-   - course_2_glossary.txt
-   - Date.cpp
-   - date2.cpp
-   - ellipses.txt
-   - ellipses(centered).txt
-   - Employee.cpp
-   - extrapolation(c++).txt
-   - extrapolation(mini).txt
-   - fig09_22.cpp
-   - final.txt
-   - finalProgram.txt
-   - finalprogram2.txt
-   - Functions.txt
-   - grade .txt
-   - grade file CATBash.txt
-   - grade templete.txt
-   - grade_subjectsATOMIC1.txt
-   - grade2.txt
-   - gradeFile.txt
-   - grades.txt
-   - graph_traversal.cpp
-   - Hare.cpp
-   - hashing_bloom_filters.cpp
-   - highway.cpp
-   - history.cpp
-   - historytest.cpp
-   - HRmanagment.cpp
-   - inputlinebylineprogram.txt
-   - InsertionSort.cpp
-   - inventoryProgram(example).txt
-   - JRivas_Lab2.cpp
-   - JRivas_Lab3.cpp
-   - JRivas_Lab4.cpp
-   - JRivas_Lab5.cpp
-   - jrivas_lab6.cpp
-   - jrivas_lab7.cpp
-   - JRivas_Lab8.cpp
-   - JRivas_Lab8(error).cpp
-   - Jrivas_Midterm.cpp
-   - kirchhoffs_Law_Calculator
-   - kirchhoffs_Law_Calculator.cpp
-   - Lab 6.cpp
-   - lab5.cpp
-   - lexicalanalysis.cpp
-   - LICENSE
-   - ListNode.cpp
-   - loginPrime(working).txt
-   - luckynumbers.cpp
-   - main.cpp
-   - manage dateonly with master(atomic2).cpp
-   - midterm souce code.txt
-   - midterm.cpp
-   - midterm.txt
-   - Module 4 methods.txt
-   - module_1.txt
-   - movieData.c.txt
-   - movieData2.txt
-   - movieData3.txt
-   - movieData5.txt
-   - movieData6.txt
-   - movieData7.txt
-   - Node.cpp
-   - number.cpp
-   - onewordsearch.cpp
-   - other.cpp
-   - Output-Build.txt
-   - Person.cpp
-   - pgchall-inventory.txt
-   - phone.cpp
-   - PhoneNumber.cpp
-   - poem.txt
-   - pointers.cpp
-   - polyhedra.cpp
-   - polyhedra.txt
-   - population.cpp
-   - practice.cpp
-   - program 7(DONT EDIT).txt
-   - program1.cpp
-   - program1.txt
-   - program2.txt
-   - program3.cpp
-   - program3.txt
-   - program4.cpp
-   - program4.txt
-   - program4.vcxproj.FileListAbsolute.txt
-   - program5.c .txt
-   - program5.txt
-   - program6.c.txt
-   - program6.txt
-   - program7.txt
-   - program9.txt
-   - programch.vcxproj.FileListAbsolute.txt
-   - programChall6.txt
-   - Project.vcxproj.FileListAbsolute.txt
-   - protoTest2++.txt
-   - quiz1.cpp
-   - race.cpp
-   - Rational.cpp
-   - rational2.cpp
-   - readlinebylineprogram.txt
-   - readwrite dataprogram.txt
-   - records_sorter.cpp
-   - rectangle.cpp
-   - return grade.txt
-   - Road.cpp
-   - safePgr4.txt
-   - salary calculator.txt
-   - seach(atomic).cpp
-   - seachthroughprogram.cpp
-   - SelectionSort.cpp
-   - semester.cpp
-   - Source1.cpp
-   - Source2.cpp
-   - spanish.cpp
-   - Student.cpp
-   - students.txt
-   - template.cpp
-   - test.cpp
-   - test2.txt
-   - Time.cpp
-   - TITLE MASM Homework5.txt
-   - TITLE MASM Homework6.txt
-   - Tortoise.cpp
-   - Untitled.txt
-   - wagecalculator.txt
-   - wagecalculatorworking.txt
-   - workingfinal1.txt
-   - workingfinal2.cpp
-   - workingP4Ch10.txt
-   - workingP4Ch10(2).txt
+   ────────────────────────────────
+   C++ MAIN AND IMPLEMENTATION FILES
+   ────────────────────────────────
+   - account.cpp                         : Implements account class logic for banking and transactions.
+   - account_class_demo.cpp              : Demonstration of object-oriented account management.
+   - airplaine_in_c.c                    : C-based airline management and ticket simulation.
+   - array_stats_and_password.cpp        : Generates random data arrays and password strings using templates.
+   - atm.cpp                             : Basic ATM operations with deposits, withdrawals, and balance checks.
+   - Bank.cpp                            : Core banking logic with encapsulated financial operations.
+   - Bubblesort_Linked_List.cpp          : Bubble sort demonstration using linked list nodes.
+   - Bubblesort_Linked_List_2.cpp        : Alternate bubble sort implementation for linked list practice.
+   - calculate_Radius(other).cpp         : Radius, area, and circumference calculations.
+   - car.cpp                             : Class demonstration for vehicle and attribute management.
+   - circuit_schematic.cpp               : Simulates circuit relationships and schematic components.
+   - class_grade_averager.cpp            : Computes and averages student grades from input data.
+   - collatz_sequence.cpp                : Displays iterative Collatz (3n + 1) sequence computations.
+   - color_mixer.cpp                     : RGB color mixing arithmetic for visualization exercises.
+   - coin.cpp                            : Coin toss probability and randomization simulation.
+   - credit_Menu_Terminal.cpp            : Menu-driven terminal program for credit management.
+   - date_class.cpp                      : Class implementation handling formatted date input and validation.
+   - ellipses.cpp                        : Calculates ellipse area and eccentricity; geometry practice.
+   - ellipses(centered).cpp              : Enhanced centered-ellipse computation program.
+   - enchanted_forest_game.cpp           : Text-based exploration adventure with node navigation.
+   - even_odd_checker.cpp                : Determines parity of integer input values.
+   - fig09_22.cpp                        : Textbook-aligned sample for structure or inheritance demonstration.
+   - functions_Average_Grade.c           : Procedural C program to compute average grades.
+   - grade_Calculator_Menu.cpp           : Interactive grade calculator with multi-menu structure.
+   - grade_File_CATBash.c                : C file parser that handles structured grade data.
+   - grade_Templete.c                    : C template illustrating grade input/output logic.
+   - grade_subjects_ATOMIC1.c            : Academic subject grading calculation exercise.
+   - graph_traversal.cpp                 : Demonstrates BFS/DFS traversal of adjacency graphs.
+   - hashing_bloom_filters.cpp           : Implements hashing and Bloom filter data-structure logic.
+   - Hare.cpp                            : OOP race participant class for tortoise-and-hare simulations.
+   - highway.cpp                         : Simulates transportation network or vehicle path management.
+   - history.cpp                         : History-based text parsing and chronological data exercise.
+   - history_Test.cpp                    : Testing harness for history.cpp.
+   - hr_Managment.cpp                    : Employee and HR management application module.
+   - inputLinebyLineProgram.cpp          : Reads and processes text input line-by-line.
+   - kirchhoffs_Law_Calculator.cpp       : Electrical current/voltage law calculation and analysis.
+   - Lab 6.cpp                           : Coursework file—numerical and logic operations.
+   - lab5.cpp                            : Coursework file—linked list and sorting practice.
+   - lexicalanalysis.cpp                 : Tokenization and lexical scanning demonstration.
+   - linked_list_grades_sort.cpp         : Sorts student grades using a linked-list data structure.
+   - luckynumbers.cpp                    : Generates pseudo-random lucky number sets.
+   - main.cpp                            : Primary driver file integrating menus, arrays, and sub-modules.
+   - manage_dateonly_with_master.cpp     : Date/time management and validation logic.
+   - midterm_grades_functions.c          : Grade functions used in midterm-level coursework.
+   - midterm_menu_grades.c               : Menu-driven grade calculator for midterm assignments.
+   - movie_archive.c                     : File-based C program managing movie record archives.
+   - number.cpp                          : Simple integer arithmetic demonstrations.
+   - onewordsearch.cpp                   : Searches for a keyword in a file or string input.
+   - other.cpp                           : Miscellaneous helper or demonstration utilities.
+   - phone.cpp                           : Handles formatted phone-number input/output.
+   - phone_number_input.cpp              : Specialized phone-number validator.
+   - poem_fstream.cpp                    : Reads and outputs poetry text using file-stream I/O.
+   - pointers.cpp                        : Pointer arithmetic and memory addressing demonstration.
+   - polyhedra.cpp                       : Calculates polyhedron properties (faces, edges, volume).
+   - polyhedra_Stack_Queue.cpp           : Implements polyhedral data manipulation with stack/queue.
+   - population.cpp                      : Basic demographic growth calculations and projections.
+   - practice.cpp                        : Sandbox for experimentation and C++ syntax practice.
+   - program1.cpp – program9.cpp         : Sequential coursework projects; logic, arrays, and recursion.
+   - race.cpp                            : Race simulation between Tortoise and Hare objects.
+   - Rational.cpp                        : Rational-number arithmetic with operator overloading.
+   - records_sorter.cpp                  : Sorting algorithms for structured student record data.
+   - rectangle.cpp                       : Computes rectangle area and perimeter.
+   - Road.cpp                            : Class representing roads and infrastructure objects.
+   - sales_linear_regression.cpp         : Implements linear regression on sales datasets.
+   - sales_prediction_simple.cpp         : Simple forecasting model for sales data.
+   - seach(atomic).cpp                   : Search-pattern testing routine.
+   - seachthroughprogram.cpp             : Keyword search demonstration program.
+   - semester_menu.cpp                   : High-level semester organization and grade overview menu.
+   - sorting_algorithms_demo.cpp         : Interactive comparison of sorting algorithms.
+   - spanish.cpp                         : Text translation or localization demonstration file.
+   - squares_Vector.cpp                  : Vector-based geometry and square-area calculations.
+   - student_grades_struct_cpp.cpp       : C++ struct-based grade management.
+   - student_manager.cpp                 : Manages student records and GPA data.
+   - student_records_sorter.cpp          : Sorting utility for structured student datasets.
+   - Product_Difference_Quotient.cpp     : Demonstrates arithmetic relationships among numbers.
+   - template.cpp                        : Template function/class syntax example.
+   - test.cpp                            : Unit test or sandbox for C++ program verification.
+   - Time.cpp                            : Time-handling class with formatting and arithmetic.
+   - tortoise_hare_race.cpp              : Combined race simulation using Hare/Tortoise classes.
+   - wagecalculator.c                    : Payroll and wage computation programs.
+   - wagecalculatorworking.c             : Payroll and wage computation programs.
+   - workingP4Ch10.cpp / (2).txt         : Chapter 10 project file set for coursework illustration.
+
+────────────────────────────────
+HEADER FILES (.h)
+────────────────────────────────
+   - account.h                     : Defines the Account class structure, encapsulating balance tracking, transaction validation, and secure deposit/withdrawal interfaces.
+   - Bank.h                        : Declares the Bank class, coordinating multiple account objects and central financial logic for transaction auditing.
+   - ClientData.h                  : Contains structured templates for client record storage, file serialization, and persistent I/O mapping.
+   - Date.h                        : Provides the Date class interface with constructors, format conversion, and comparison utilities.
+   - Employee.h                    : Defines attributes and accessors for Employee objects including payroll integration and position metadata.
+   - Hare.h                        : Declares the Hare class used in the Tortoise and Hare race simulation with speed and position tracking.
+   - ListNode.h                    : Defines the ListNode structure supporting linked list data manipulation, traversal, and sorting routines.
+   - Node.h                        : Declares Node objects for navigational text adventures and linked object relationships in tree/graph simulations.
+   - Person.h                      : Provides a generic Person base class with name, age, and identity abstractions for inheritance.
+   - PhoneNumber.h                 : Declares the PhoneNumber class with validation, formatting, and stream I/O support for contact records.
+   - polyhedra.h                   : Defines geometric data structures and prototypes for computing polyhedral surfaces and volumetric relationships.
+   - population.h                  : Declares data models and growth computation utilities for demographic analysis programs.
+   - Queue.h                       : Generic queue interface header supporting FIFO operations across data types.
+   - Rational.h                    : Declares a Rational number class supporting fractional arithmetic with operator overloading.
+   - rectangle.h                   : Provides class declarations for 2D rectangle geometry, supporting area and perimeter computations.
+   - Road.h                         : Outlines the Road class encapsulating directional segments, distances, and network path connectivity.
+   - Stack.h                       : Template stack implementation providing LIFO operations and boundary safety.
+   - Student.h                     : Defines student record management structures for GPA, ID, and course performance tracking.
+   - Time.h                         : Declares the Time class for handling hour/minute/second arithmetic and formatted output.
+   - Tortoise.h                    : Counterpart to Hare.h, defining movement logic for race simulations emphasizing steady progress.
+
+────────────────────────────────
+C SOURCE FILES
+────────────────────────────────
+   - airline.c                     : Implements flight booking and manifest management using structured record arrays.
+   - airline_ticket.c              : Handles airline ticket data processing, formatting, and customer lookup features.
+   - area_Circumference_Volume_Menu.c : Provides a console-driven geometry calculator for area, circumference, and volume computations.
+   - credit_App.c                  : Simulates a credit approval application form with file I/O and structured record verification.
+   - functions_Average_Grade.c     : Encapsulates reusable functions for computing academic grade averages and statistical metrics.
+   - grade.c                       : Handles grade input, evaluation, and pass/fail output.
+   - grade2.c                      : Companion to grade.c focusing on multi-student computation and output aggregation.
+   - grade_File_CATBash.c          : Reads and writes categorized grade files via custom I/O parsing.
+   - grade_Templete.c              : Template C program illustrating modular grade computation workflows.
+   - grade_subjects_ATOMIC1.c      : Implements subject-based grade calculations for academic dataset exercises.
+   - inventoryProgram(example).c   : Demonstrates product inventory management using arrays and structure pointers.
+   - inventory_2.c                 : Successor to inventoryProgram—expands item tracking and input validation.
+   - loginPrime(working).c         : Basic authentication logic demonstrating conditional loops and string handling.
+   - midterm_grades_functions.c    : Function library used in grading menus and evaluation projects.
+   - midterm_menu_grades.c         : Interactive grade management system for academic midterm exercises.
+   - movie_archive.c               : File-handling application managing movie title records with CRUD-like operations.
+   - program4.c                    : C program focusing on iterative computation and conditional branching.
+   - program5.c                    : Multi-function C file illustrating arithmetic and user input validation.
+   - program6.c                    : Handles array processing and formatted output demonstration.
+   - sort_Numbers.c                : Sorts numeric input from files or users using simple iterative sorting algorithms.
+   - wagecalculator.c              : Performs hourly, salaried, and overtime wage calculations.
+   - wagecalculatorworking.c       : Finalized version of wagecalculator.c with input error handling and output formatting.
+
+→ Collectively, these C programs exemplify procedural programming practices, emphasizing memory safety, file interaction, and educational modular design.
+
+────────────────────────────────
+TEXT, DATA, AND CSV FILES
+────────────────────────────────
+   - accounts.txt                  : Sample dataset containing mock bank account entries for testing financial modules.
+   - averages.txt                  : Stores computed numerical averages for cross-reference testing.
+   - Course 1 Terms Module 1.txt   : Lecture notes and terminology index for introductory coursework.
+   - Course 1 Terms Module 2.txt   : Continuation of module 1 notes, focusing on intermediate technical vocabulary.
+   - course_2_glossary.txt         : Glossary of key concepts and definitions used throughout programming assignments.
+   - grades.txt                    : Output file containing formatted student grades and GPA data.
+   - gradeFile.txt                 : Saved grade records demonstrating file stream persistence.
+   - Module 4 methods.txt          : Notes describing implementation details for module 4 coursework.
+   - movieData2.txt – movieData7.txt : Test datasets for file I/O assignments involving movie library storage.
+   - poem.txt                      : Sample text used for stream and character buffer demonstrations.
+   - polyhedra.txt                 : Static dataset for geometric computation tests.
+   - readwrite dataprogram.txt     : Input/output log used in file stream exercises.
+   - return grade.txt              : Contains final calculated grades from aggregate functions.
+   - safePgr4.txt                  : Backed-up data file for “Program 4” assignments.
+   - salary calculator.txt         : Reference data for payroll and salary computation exercises.
+   - students.txt                  : Input dataset of student names and grades.
+   - workingP4Ch10.txt, workingP4Ch10(2).txt : Saved iterations of Chapter 10 coursework files.
+   - student_grades_raw.txt        : Raw, unformatted student performance data before structuring.
+
+→ These textual and CSV files document academic data, project parameters, and persistent storage used across multiple programs.
+
+────────────────────────────────
+JSON AND CONFIGURATION FILES
+────────────────────────────────
+   - .vscode/tasks.json            : VS Code build automation configuration for C/C++ tasks.
+   - c_cpp_properties.json         : Compiler and include-path configuration for Visual Studio Code projects.
+   - launch.json                   : Debug launch configuration for interactive and runtime execution.
+   - settings.json                 : Editor and workspace behavior configuration.
+   - VSWorkspaceState.json         : VS Code internal file tracking and last-session state management.
+   - ProjectSettings.json          : Metadata configuration for project-level build settings.
+   - Project.vcxproj.FileList...   : Auto-generated Visual Studio project dependency list.
+   - package, .lock, .support.json : NodeJS metadata ensuring consistent environment dependencies.
+   - component.json                : Defines component references for dependency injection and metadata.
+   - db.json                       : Sample database schema for structured record input.
+   - read.json                     : Reference JSON used for testing read operations.
+   - codes.json                    : Repository of encoding tables and program codes.
+   - tsconfig.json                 : TypeScript configuration retained for compatibility in hybrid projects.
+   - types.json                    : Declares data type relationships for programmatic mapping.
+
+→ These files manage build, encoding, and runtime configurations essential for portability, reproducibility, and language-set interoperability.
+
+────────────────────────────────
+ASSEMBLY AND LOW-LEVEL FILES
+────────────────────────────────
+   - geometry_menu.asm             : MASM32 assembly file implementing menu-driven geometry calculations and arithmetic logic.
+   - geometry_menu_masm.asm        : Enhanced MASM variant focusing on modularity and interrupt-driven control flow.
+
+→ Serve as the foundational low-level exercises bridging software logic and CPU instruction management.
+
+────────────────────────────────
+SPECIAL AND INDEX FILES
+────────────────────────────────
+   - repo_inventory.txt            : Auto-generated file enumerating all source, header, and data files for repository indexing.
+   - all_files_output.txt          : Output of automated inventory or audit commands consolidating repository contents.
+   - Output-Build.txt              : Build report summarizing compiler outputs and object generation results.
+
+→ These indexing files are integral for repository introspection, build verification, and documentation of source integrity.
+
 =======================================================================
 
    © 2025 Joe L. Rivas | South Texas College | All rights reserved.
