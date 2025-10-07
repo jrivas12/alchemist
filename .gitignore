@@ -1,0 +1,8 @@
+node_modules/
+*.o
+*.out
+*.exe
+main
+.vscode/
+.DS_Store
+
