@@ -1,16 +1,20 @@
- //10.5
-
 #include <iostream>
-#include "PhoneNumber.h"
 using namespace std;
 
-int main() {
-	PhoneNumber phone;
-	
-	cout << "Enter phone number in the form (555) 555-5555:" << endl;
-	cin >> phone;
-	
-	cout << "\nThe phone number was:\n";
-	
-	cout << phone << endl;
+int main () {
+        int total {0};
+        unsigned int gradeCounter{1};
+
+while (gradeCounter <= 10) {
+        cout << "Enter grade: ";
+        int grade;
+        cin  >> grade;
+        total = total + grade;
+        gradeCounter = gradeCounter + 1;
 }
+
+int average{total / 10};
+
+cout << "\nTotal of all 10 grades is " << total;
+cout << "\nClass average is "          << average << endl;
+}                                                                                                                 
