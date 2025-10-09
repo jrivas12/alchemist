@@ -17,6 +17,7 @@
 ## 📚 About This Project
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm **Joe Rivas**, and this repository is a monument to my belief that code should *teach*, not just execute. My journey into C++ wasn’t about finding the quickest path to a job — it was about diving deep into the machine, understanding the gears, and mastering the craft. I thrive on the challenge of making the complex explicit. For years, I’ve seen students struggle with opaque codebases. This project is my counter-argument — a dedication to unapologetically verbose, cleanly structured programs that let you **trace the logic on a Sunday afternoon**. From mastering recursion to visualizing stack and queue dynamics in the terminal, every line here is a lesson in rigor. If you’re a developer who values **clarity over convention**, **design over shortcuts**, and believes that **fundamentals are the true measure of craftsmanship**, then this space is for you.  
+
 Clone it, explore it, and let’s work on the hard problems — together.
 
 ---
