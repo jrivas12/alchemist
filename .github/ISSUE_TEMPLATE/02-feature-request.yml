@@ -1,0 +1,57 @@
+name: "✨ Feature Request"
+description: Suggest an idea, improvement, or enhancement for this project.
+title: "[Feature Request]: "
+labels: ["enhancement"]
+assignees:
+  - jrivas12
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Feature Request
+        Thank you for contributing to **Alchemist**.  
+        Please complete the sections below to help us understand your idea clearly.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 📌 Problem Description
+      description: A clear and concise description of the current experience or limitation that this feature aims to solve.
+      placeholder: ex. "I find it difficult to compare sorting performance because the current output isn't timed."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: A clear and concise description of what the ideal behavior or feature would look like.
+      placeholder: ex. "I'd like to see a new TimingUtility.h that uses <chrono> to measure execution time for sorting algorithms."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔁 Alternatives Considered
+      description: List any alternative solutions or features you've tried or considered, and explain why they didn't fit your needs.
+      placeholder: ex. "I tried benchmarking externally, but it lacks ANSI color output integration."
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 📝 Feature Scope & Impact
+      description: Describe which files, labs, or modules this change would affect.
+      placeholder: ex. "This would impact menu_Orchestrator.cpp and ArrayStats.h."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🧠 _Tip: Attach screenshots, snippets, or references if they help illustrate your idea._  
+        _Thank you for helping improve **Alchemist** — where code teaches as much as it executes._
