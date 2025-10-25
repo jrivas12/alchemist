@@ -1,0 +1,128 @@
+#include <stdio.h>
+
+struct movieData{
+
+        unsigned int code[3];
+        char name[3];
+        char director[3];
+        int date[3];
+        double lenght[3];
+}
+unsigned int enter();
+
+int main ()
+
+{
+        FILE *movieData;
+        unsigned int movieData[2] = {0};
+        void(*movieData[3])(char) = {movie1, movie2, movie3};
+
+        printf("%s", "Enter a movie record code 1-3:");
+        size_t choice;
+        scanf("%u", &choice);
+        scanf("%u %s %s %lf %d", m.code, m.name, m.dir, m.date, m.lenght);
+        printf("%u %s %s %lf %d \n",
+                "Movie Record: &code\n",
+                "Title: &name\n",
+                "Director: &director[3]",
+                "Released: &date[3]",
+                "Lenght: &lenght[3]");
+}
+
+        while(choice >=0 && choice < 3){
+                (*movieData[3])(&choice);
+
+                printf("%s", "Enter movie code 1-3:");
+                scanf("%u", &choice);
+        }
+
+        move_record = movie_data;
+
+        if ((movieData = fopen("movie.dat", "rb+")) == NULL){
+                puts("Movie file does not exist.");
+        }
+        else {
+                printf("%s", "Enter Option\n"
+                                "1 - Insert Movie Record\n"
+                                "2 - List Movie\n"
+                                "3 - View all Movie Records\n"
+                                "4 - Exit\n?");
+
+
+//initialization
+
+
+ int movie1[4][2] = {/*int code*/, char name, char director, int date, double lenght}{
+         puts("Information about this movie:");
+         printMovie(movie1);
+
+int movie2[4][2] = {char name, char director, int date, double lenght}{
+        puts("information about this movie:");
+        printMovie(movie2);
+
+int movie3[4][2] = {char name, char director, int date, double lenght}{
+        puts("Information about this movie:");
+        printMovie(movie3);
+
+
+
+                                "1 - Insert Movie Record\n"
+                                "2 - List Movie\n"
+                                "3 - View all Movie Records\n"
+                                "4 - Exit\n?");
+
+
+//initialization
+
+
+ int movie1[4][2] = {/*int code*/, char name, char director, int date, double lenght}{
+         puts("Information about this movie:");
+         printMovie(movie1);
+
+int movie2[4][2] = {char name, char director, int date, double lenght}{
+        puts("information about this movie:");
+        printMovie(movie2);
+
+int movie3[4][2] = {char name, char director, int date, double lenght}{
+        puts("Information about this movie:");
+        printMovie(movie3);
+
+
+//option1: enter data
+
+
+//option2: list movie
+
+
+//option3: view list
+
+
+//option4: exit!
+        while (code != 4){
+                        unsinged int code;
+                        char name[3];
+                        char director;
+                        int date;
+                        double lenght;
+                        }
+                scanf(cmovieData, "%d");
+
+                struct movieData Movie = {0, "", "", 0, 0};
+                printf("%s", Enter Movie Code:"
+                        "(1 to 3, 0 to end input):");
+                scanf(%d", &movieData.code);
+
+
+        }
+
+        printf("1. Create a record code:");
+        printf("2. Enter Movie Name:");
+        printf("3. Enter Director:");
+        printf("4. Enter Release Date: ");
+        printf("3. Enter Lenght:");
+
+        return 0;
+}
+                                                                                                 46,3-24       Bot
+
+     

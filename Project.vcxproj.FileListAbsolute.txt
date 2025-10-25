@@ -1,2 +1,2 @@
-C:\Users\joele\OneDrive - South Texas College\Fall 2024\COSC - 2425 - V01\Chapter 4\homework 4\Debug\Project.exe
+:\Users\joele\OneDrive - South Texas College\Fall 2024\COSC - 2425 - V01\Chapter 4\homework 4\Debug\Project.exe
 C:\Users\joele\OneDrive - South Texas College\Fall 2024\COSC - 2425 - V01\Chapter 2\Test1\Debug\Project.exe

@@ -1,4 +1,3 @@
-
 purplebox.py
 strace - trace system calls made by these
 programs

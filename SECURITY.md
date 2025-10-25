@@ -1,8 +1,13 @@
 # 🔒 Security Policy — Safeguarding the Craft  
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)  
-[![Patreon](https://img.shields.io/badge/Sponsor-Patreon%2Fjrivas12-orange.svg)](https://patreon.com/jrivas12)  
-[![Cash App](https://img.shields.io/badge/CashApp-$joerivas801-green.svg)](https://cash.app/$joerivas801)  
+[![License](https://img.shields.io/badge/License-Apache%202.0-dc143c.svg)](LICENSE)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-joeleerivas-0a66c2.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joeleerivas/)
+[![Patreon](https://img.shields.io/badge/Patreon-jrivas12-001F54.svg?logo=patreon&logoColor=white)](https://patreon.com/jrivas12)
+[![Cash App](https://img.shields.io/badge/CashApp-$fiasco212-00c244.svg?logo=cashapp&logoColor=white)](https://cash.app/$fiasco212)
+
+[![Credly Badge](https://img.shields.io/badge/Google-IT%20Automation%20w%2F%20Python-808080.svg?style=for-the-badge&logo=googlecloud&logoColor=white)](https://images.credly.com/size/340x340/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png)
+[![Credly Badge 2](https://img.shields.io/badge/Professional%20Certificate-ffb347.svg?style=for-the-badge)](https://images.credly.com/size/340x340/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png)
+
 
 > **Secure code is disciplined code — written with intent, tested with rigor, and respected for its precision.**
 

@@ -1,4 +1,4 @@
-list[index] = x - Replaces the element at index [n] with x.
+ist[index] = x - Replaces the element at index [n] with x.
 
 list.append(x) - Appends x to the end of the list.
 
