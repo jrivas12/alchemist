@@ -1,8 +1,6 @@
-node_modules/
-*.o
-*.out
-*.exe
-main
-.vscode/
-.DS_Store
-
+# Ignore Visual Studio files
+.vs/
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
