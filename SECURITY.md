@@ -42,12 +42,40 @@ Older branches may still build, but they’re considered **out of scope** for se
 Please **do not open a public GitHub Issue** for security concerns.  
 All vulnerability reports should be sent **privately** to the maintainer via email.  
 
-**Contact:**  
-📧 (https://github.com/jrivas12/alchemist/blob/main/SECURITY.md
-)](https://github.com/jrivas12/alchemist/blob/main/SECURITY.md
-)
+---
 
 ---
+
+## 📬 Contact & Connect
+
+### 🧑‍💻 Security / Maintainer Contact
+
+For vulnerability disclosures or sensitive matters, **please do not open public GitHub Issues.**  
+Instead, contact the maintainer privately:
+
+- 📧 **jrivas12@stu.southtexascollege.edu**
+
+---
+
+### 🌐 Links & Social Presence
+
+| Platform       | Link |
+|----------------|------|
+| 🎥 TikTok       | [@fiascoDev](https://www.tiktok.com/@fiascodev) |
+| 📛 Credly Badge | [Google IT Automation with Python Professional Certificate](https://www.credly.com/badges/ffc48a24-3206-49ce-b000-bdeaba9d3b3e/public_url) |
+| 💼 LinkedIn     | [joeleerivas](https://www.linkedin.com/in/joeleerivas) |
+
+---
+
+### 🔗 Quick Access Badges
+
+[![TikTok](https://img.shields.io/badge/TikTok-%40fiascoDev-black?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@fiascodev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-joeleerivas-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joeleerivas)
+[![Credly Badge](https://img.shields.io/badge/Credly-Google%20IT%20Automation%20with%20Python%20Certified-blueviolet?style=for-the-badge&logo=google&logoColor=white)](https://www.credly.com/badges/ffc48a24-3206-49ce-b000-bdeaba9d3b3e/public_url)
+
+---
+
+
 
 ## 🧩 What to Include  
 
