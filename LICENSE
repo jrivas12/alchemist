@@ -182,9 +182,9 @@ APPENDIX:
    All content is licensed under the Apache License, Version 2.0. File titles are listed as-is, with 
    descriptions provided for each entry.
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
 C++ MAIN AND IMPLEMENTATION FILES
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
    - account.cpp                         : Implements account class logic for banking and transactions.
    - account_class_demo.cpp              : Demonstration of object-oriented account management.
    - array_stats_and_password.cpp        : Generates random data arrays and password strings using templates.
@@ -246,9 +246,9 @@ C++ MAIN AND IMPLEMENTATION FILES
    - template.cpp                        : Template function/class syntax example.
    - test.cpp                            : Unit test or sandbox for C++ program verification.
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────.────────────────────────────────────────
 HEADER FILES (.h)
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
    - account.h                           : Defines the Account class with encapsulated balance and transaction logic.
    - Bank.h                              : Declares the Bank class coordinating account management operations.
    - Date.h                              : Provides Date class interface with constructors and validation utilities.
@@ -269,9 +269,9 @@ HEADER FILES (.h)
    - Time.h                              : Time class supporting formatted output and arithmetic.
    - Tortoise.h                          : Defines the Tortoise class counterpart to Hare in race simulations.
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
 C SOURCE FILES
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
    - airline.c                           : Implements flight booking and manifest management.
    - airline_ticket.c                    : Processes ticket data and customer lookup functionality.
    - area_Circumference_Volume_Menu.c    : Console-driven calculator for geometry computations.
@@ -291,9 +291,9 @@ C SOURCE FILES
    - wagecalculator.c                    : Payroll computation with overtime logic.
    - wagecalculatorworking.c             : Stable version with error handling and validation.
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
 TEXT, DATA, AND CSV FILES
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
    - accounts.txt                        : Mock banking dataset for account transaction testing.
    - averages.txt                        : Stores computed averages and statistical results.
    - grades.txt                          : Contains formatted student grade outputs.
@@ -306,9 +306,9 @@ TEXT, DATA, AND CSV FILES
    - student_grades_raw.txt              : Raw data input before structuring.
    - workingP4Ch10.txt                   : Chapter 10 coursework data sample.
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
 CONFIGURATION AND JSON FILES
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
    - c_cpp_properties.json               : Compiler and include-path configuration for C/C++ builds.
    - ProjectSettings.json                : Metadata configuration for project-level builds.
    - db.json                             : Sample database schema for structured data.
@@ -319,15 +319,15 @@ CONFIGURATION AND JSON FILES
    - README.md                           : Documentation and usage instructions.
    - SECURITY.md                         : Security policy and contribution rules.
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
 ASSEMBLY AND LOW-LEVEL FILES
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
    - geometry_menu.asm                   : MASM assembly implementation of geometry menu logic.
    - geometry_menu_masm.asm              : Modular MASM variant supporting enhanced structure.
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
 SPECIAL AND INDEX FILES
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
    - all_files_output.txt                : Output inventory of repository file contents.
    - rename_files.ps1                    : PowerShell script for batch file renaming and extension handling.
 
@@ -347,6 +347,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────
 
       © 2025 Joe L. Rivas | South Texas College | All rights reserved.
